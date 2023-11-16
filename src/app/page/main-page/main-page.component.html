@@ -1,0 +1,18 @@
+<div class="main">
+  <img src="../../../assets/img/logo.jpeg" alt="no esfdae" class="ubi-logo" />
+
+  <div class="container-right">
+    <div class="container-list-video-game gridclass">
+      <div class="container-categories">
+        <div *ngFor="let categorias of categoriasUnicas">
+          <div class="button-Categories"  (click)="saveCategorie(categorias)">
+            <p class="text-categories">
+              {{ categorias }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <app-view-video-game class="container" [videoJuegos]="videojuegos" [categoriaSeleccionada]="categoriaSeleccionada" (hoverChanged)="handleHoverChange($event)"/>
+    </div>
+  </div>
+</div>
