@@ -1,0 +1,79 @@
+<app-toolbar/>
+<div class="main">
+  <div class="main-container">
+    <div class="container-img-game">
+      <img [src]="videojuego.imagenes[0]" alt="{{ videojuego.nombre }}" class="img" />
+    </div>
+    <div class="container-right">
+      <div class="container-up">
+        <div class="title-videoGame">
+          {{videojuego.nombre}}
+        </div>
+        <div class="container-ranking">
+          <div class="number-ranking">
+              4,5
+          </div>
+          <img class="star" src="../../../assets/img/STAR.png" >
+      </div>
+      </div>
+      <div class="container-category">
+        <h3 class="text-category">
+          Genero: {{videojuego.categoria}}
+        </h3>
+    </div>
+    <div class="gallery">
+      <img [src]="videojuego.imagenes[1]" alt="Imagen 1" class="thumbnail" (click)="expandImage('imagen1.jpg')">
+      <img [src]="videojuego.imagenes[2]" alt="Imagen 2" class="thumbnail" (click)="expandImage('imagen2.jpg')">
+      <img [src]="videojuego.imagenes[3]" alt="Imagen 3" class="thumbnail" (click)="expandImage('imagen2.jpg')">
+    </div>
+    <div *ngIf="expandedImage" class="expanded-container" (click)="closeImage()">
+      <span class="close-btn">X</span>
+      <img [src]="expandedImage" alt="Imagen Ampliada" class="expanded-image">
+    </div>
+      <div class="container-description">
+          <textarea class="custom-text-area" placeholder="{{videojuego.descripcion}}" readonly>{{videojuego.descripcion}}</textarea>
+      </div>
+
+      <section>
+        <h2 class="title-comment">
+          Comentarios
+        </h2>
+        <div class="container-comments">
+          <div class="comentario" *ngFor="let comentario of comentarios">
+            <div class="container-sup-comments">
+              <h2 class="user-name-comment">
+                {{comentario.user}}
+              </h2>
+              <h2 class="date-comment">
+                {{comentario.fecha}}
+              </h2>
+            </div>
+            <div class="container-description-comment">
+              <p class="description-comment">
+                {{comentario.comentario}}
+              </p>
+            </div>
+            <div class="container-inf">
+              <div class="container-likes">
+                <h3 class="date-comment">
+                  {{comentario.likes}}
+                </h3>
+                <mat-icon class="like">
+                  thumb_up
+               </mat-icon>
+              </div>
+              <div class="container-likes">
+                <h3 class="date-comment">
+                  {{comentario.dislikes}}
+                </h3>
+                <mat-icon class="like">
+                  thumb_down
+               </mat-icon>
+              </div>
+            </div>
+          </div>
+          </div>
+      </section>
+    </div>
+  </div>
+</div>
