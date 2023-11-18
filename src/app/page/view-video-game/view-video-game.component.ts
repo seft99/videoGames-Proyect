@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import {  videoGames } from 'src/app/shared/model/videoGames';
+import { ActivatedRoute, Router } from '@angular/router';
+import { videoGames } from 'src/app/shared/model/videoGames';
 
 @Component({
   selector: 'app-view-video-game',
@@ -7,19 +8,23 @@ import {  videoGames } from 'src/app/shared/model/videoGames';
   styleUrls: ['./view-video-game.component.scss'],
 })
 export class ViewVideoGameComponent implements OnInit {
-  categories!: string[];
-  @Input() videoJuegos: videoGames [] = [];
-  @Input() categoriaSeleccionada: string | null = null;
+  @Input() videoJuegos: videoGames[] = [];
   @Output() hoverChanged = new EventEmitter<videoGames>();
-  mostrarCategorias: any
-  ngOnInit(): void {
-      console.log('categoria',this.categoriaSeleccionada)
-  }
 
+
+  constructor(private route: ActivatedRoute, private router: Router) {}
+
+  ngOnInit(): void {
+
+  }
 
   toggleHover(videojuego: videoGames) {
     videojuego.hovered = !videojuego.hovered;
     this.hoverChanged.emit(videojuego);
   }
 
+  navigateToConsultVideoGame(videojuego: videoGames) {
+    const videojuegoId = videojuego.id;
+    this.router.navigate(['/consultVideoGame', videojuegoId]);
+  }
 }

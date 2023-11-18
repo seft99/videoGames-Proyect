@@ -1,0 +1,46 @@
+.main-toolbar{
+  width: 100%;
+  height: 50px;
+  background-color: rgb(233, 97, 7);
+  display: flex;
+  align-items: center;
+
+}
+
+.btn-categories{
+  margin-left: 50px;
+  width: 150px;
+  height: 30px;
+  background-color: black;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.container-toolbar-elements{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-btn-categories{
+  font-size: 14px;
+  color: white;
+  font-weight: 700;
+}
+
+.data-log{
+  margin-right: 50px;
+  width: 150px;
+  height: 30px;
+  background-color: black;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}

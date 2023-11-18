@@ -1,0 +1,218 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.main {
+  background-color: black;
+  min-height: 120vh; /* Cambiado de % a vh */
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.container-img-game {
+  margin-left: 20px;
+  width: 35%;
+  height: 100%;
+
+}
+
+.img {
+  width: 100%;
+  height: 720px;
+}
+
+.container-right {
+  display: flex;
+  margin-left: 50px;
+  flex-direction: column;
+  gap: 20px;
+}
+.container-up{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.title-videoGame {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+.number-ranking{
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+.container-ranking{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.star{
+  width: 20px;
+  height: 20px;
+}
+
+.container-description {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-text-area {
+  display: flex;
+  width: 100%;
+  background: transparent;
+  height: 120px;
+  resize: none;
+  outline: none;
+  padding: 10px;
+  justify-content: flex-start;
+  color: white;
+  border: solid white;
+  height: 120px;
+  border-radius: 8px;
+}
+
+.text-category{
+  font-size: 14px;
+  color: white;
+  margin: 0;
+}
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.expanded-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.expanded-image {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.container-comments{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.comentario{
+  width: 100%;
+  display: flex;
+  height: auto;
+  background-color: black;
+  padding: 20px;
+  flex-direction: column;
+  gap: 2px;
+  border-bottom: solid white;
+}
+
+.container-sup-comments{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.user-name-comment{
+  font-size: 14px;
+  color: white;
+  font-weight: 700;
+  margin: 0;
+}
+
+.date-comment{
+  font-size: 14px;
+  color: white;
+  margin: 0;
+}
+
+.container-description-comment{
+  width: 100%;
+  height: auto;
+}
+
+.description-comment{
+  font-size: 12px;
+  color: white;
+}
+
+.container-inf{
+  display: flex;
+  width: 100px;
+  gap: 20px;
+}
+
+.like{
+  color: white;
+  font-size: 19px;
+}
+
+.container-likes{
+  width: 70px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: end;
+  justify-content: center;
+}
+
+.container-comments::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 8px;
+  background: var(--B500, #33474C);
+}
+
+.container-comments::-webkit-scrollbar-thumb {
+  width: 8px;
+  border-radius: 8px;
+  background-color: #030301;
+  margin: 0 4px;
+}
+
+.title-comment{
+  font-size: 20px;
+  color: white;
+  margin: 0;
+}

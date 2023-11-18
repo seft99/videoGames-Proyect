@@ -9,6 +9,7 @@ import { ViewVideoGameComponent } from './page/view-video-game/view-video-game.c
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './page/toolbar/toolbar.component';
 import { MaterialImportsModule } from './shared/material-imports/material-imports.module';
+import { ConsultVideoGameComponent } from './page/consult-video-game/consult-video-game.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MaterialImportsModule } from './shared/material-imports/material-import
     MainPageComponent,
     ViewVideoGameComponent,
     ToolbarComponent,
+    ConsultVideoGameComponent,
 
   ],
   imports: [
