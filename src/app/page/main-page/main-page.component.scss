@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -12,7 +13,7 @@ html, body {
   justify-content: center;
 }
 
-.container-logo{
+.container-logo {
   width: 100%;
   height: 300px;
   display: flex;
@@ -40,7 +41,7 @@ html, body {
 .container-list-video-game::-webkit-scrollbar {
   width: 7px;
   border-radius: 8px;
-  background: var(--B500, #33474C);
+  background: var(--B500, #33474c);
 }
 
 .container-list-video-game::-webkit-scrollbar-thumb {
@@ -50,17 +51,17 @@ html, body {
   margin: 0 4px;
 }
 
-.logo{
+.logo {
   width: 200px;
   height: 200px;
 }
 
-.ubi-logo{
+.ubi-logo {
   margin-top: -100px;
   margin-right: -40px;
 }
 
-.button-Categories{
+.button-Categories {
   background-color: rgb(233, 97, 7);
   outline: black;
   width: auto;
@@ -70,7 +71,7 @@ html, body {
   user-select: none;
 }
 
-.container-categories{
+.container-categories {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -78,9 +79,77 @@ html, body {
   margin-bottom: 20px;
 }
 
-.text-categories{
+.text-categories {
   font-size: 14px;
   color: black;
   padding: 2px;
   font-weight: 700;
 }
+
+.container-login-main {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.container-login {
+  margin-top: 10px;
+  width: 220px;
+  background-color: rgb(233, 97, 7);
+  height: 50px;
+  border-radius: 99px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 5px;
+}
+
+.background-user-icon {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-icon-logo{
+  width: 40px;
+  height: 40px;
+}
+
+.container-user{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.userName{
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
+}
+
+.email-user{
+  font-size: 10px;
+  color: black;
+}
+
+.moreOptions{
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.menu-options-text{
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+.mat-mdc-menu-item{
+  min-height: 20px;
+}
+
+

@@ -21,15 +21,11 @@
       <div class="container-category">
         <h3 class="text-category">Genero: {{ videojuego.categoria }}</h3>
       </div>
+
       <div class="container-gallery">
         <div class="gallery-img" *ngFor="let imagen of videojuego.imagenes.slice(1)" (click)="openPopup(imagen)">
           <img [src]="imagen" />
         </div>
-      </div>
-
-      <div class="popup-img" *ngIf="mostrarPopup" (click)="closePopup()">
-        <span>&times;</span>
-        <img [src]="imagenPopup" />
       </div>
 
       <div class="popup-img" *ngIf="mostrarPopup" (click)="closePopup()">
