@@ -1,19 +1,47 @@
-
 <div class="main">
   <img src="../../../assets/img/logo.jpeg" alt="no esfdae" class="ubi-logo" />
-
   <div class="container-right">
+    <div class="container-login-main">
+      <div class="container-login">
+        <div class="background-user-icon">
+          <img
+            src="../../../assets/img/pngtree-phoenix-flame-flying-png-image_6855516.png"
+            class="img-icon-logo"
+          />
+        </div>
+        <div class="container-user">
+          <div class="userName">SEFT99</div>
+          <div class="email-user">sebas.1910@hotmail.com</div>
+        </div>
+
+        <mat-icon class="moreOptions" [matMenuTriggerFor]="afterMenu">
+          keyboard_arrow_down
+        </mat-icon>
+        <mat-menu #afterMenu="matMenu" xPosition="after">
+          <button mat-menu-item>
+            <p class="menu-options-text">Ver Perfil</p>
+          </button>
+          <button mat-menu-item class="menu-options-text">
+            <p class="menu-options-text">Salir</p>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
     <div class="container-list-video-game gridclass">
       <div class="container-categories">
         <div *ngFor="let categorias of categoriasUnicas">
-          <div class="button-Categories"  (click)="saveCategorie(categorias)">
+          <div class="button-Categories" (click)="saveCategorie(categorias)">
             <p class="text-categories">
               {{ categorias }}
             </p>
           </div>
         </div>
       </div>
-      <app-view-video-game class="container" [videoJuegos]="videojuegos"  (hoverChanged)="handleHoverChange($event)"/>
+      <app-view-video-game
+        class="container"
+        [videoJuegos]="videojuegos"
+        (hoverChanged)="handleHoverChange($event)"
+      />
     </div>
   </div>
 </div>
