@@ -35,6 +35,7 @@ body {
   margin-left: 50px;
   flex-direction: column;
   gap: 20px;
+  width: 55%;
 }
 .container-up{
   display: flex;
@@ -215,4 +216,55 @@ body {
   font-size: 20px;
   color: white;
   margin: 0;
+}
+
+.container-gallery{
+width: auto;
+height: 100px;
+display: flex;
+gap: 10px;
+}
+
+.gallery-img{
+  width: 250px;
+  height: 100px;
+  cursor: pointer;
+}
+.main .container-gallery .gallery-img img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+transition: .2s linear;
+}
+
+.main .container-gallery .gallery-img:hover img{
+  transform: scale(1.1);
+}
+
+.main .popup-img{
+  position: fixed;
+  top: 0; left: 0;
+  background: rgba(0,0,0,.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+
+}
+
+
+
+.main .popup-img img{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid rgb(233, 97, 7);
+  border-radius: 5px;
+  width: 750px;
+  object-fit: contain;
+}
+
+@media (max-width:768px){
+  .main .popup-img{
+    width: 95%;
+  }
 }
