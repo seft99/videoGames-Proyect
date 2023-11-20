@@ -59,3 +59,19 @@ input::placeholder {
   cursor: pointer;
   user-select: none;
 }
+
+.container-register{
+display: flex;
+align-items: center;
+gap: 5px;
+}
+.text-register{
+  font-size: 14px;
+  color: white;
+}
+
+.text-register-link{
+  font-size: 14px;
+  color: rgb(233, 97, 7);
+  cursor: pointer;
+}

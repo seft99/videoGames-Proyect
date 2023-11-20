@@ -27,4 +27,8 @@ export class ViewVideoGameComponent implements OnInit {
     const videojuegoId = videojuego.id;
     this.router.navigate(['/consultVideoGame', videojuegoId]);
   }
+
+  aumentarVistas(){
+    this.videoJuegos
+  }
 }

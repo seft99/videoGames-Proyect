@@ -12,6 +12,7 @@ export class ConsultVideoGameComponent {
   mostrarPopup = false;
   imagenPopup: string = '';
   currentIndex: number = 0;
+
   videojuego = {
     id: 0,
     imagenes: [

@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './page/toolbar/toolbar.component';
 import { MaterialImportsModule } from './shared/material-imports/material-imports.module';
 import { ConsultVideoGameComponent } from './page/consult-video-game/consult-video-game.component';
+import { RegisterUserComponent } from './page/register-user/register-user.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ConsultVideoGameComponent } from './page/consult-video-game/consult-vid
     ViewVideoGameComponent,
     ToolbarComponent,
     ConsultVideoGameComponent,
+    RegisterUserComponent,
 
   ],
   imports: [

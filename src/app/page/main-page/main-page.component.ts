@@ -16,6 +16,7 @@ export class MainPageComponent {
     {
       id:0,
       imagen: "https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
+      numVistas:0,
       nombre: "The Legend of Zelda: Breath of the Wild",
       categoria: "Aventura",
       descripcion: "Embárcate en una épica aventura en el vasto reino de Hyrule mientras luchas contra criaturas malévolas y descubres los secretos de este mundo abierto.",
@@ -24,6 +25,7 @@ export class MainPageComponent {
     {
       id:1,
       imagen: "https://areajugones.sport.es/wp-content/uploads/2022/07/edicion-estandar-fifa-23-mbape-vertical.jpg",
+      numVistas:0,
       nombre: "FIFA 23",
       categoria: "Deportes",
       descripcion: "Experimenta la emoción del fútbol con gráficos realistas, modos de juego emocionantes y la posibilidad de llevar a tu equipo a la gloria en torneos internacionales.",
@@ -32,6 +34,7 @@ export class MainPageComponent {
     {
       id:2,
       imagen: "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/04/caratula-assassins-creed-valhalla-1931677.jpg?tf=1200x",
+      numVistas:0,
       nombre: "Assassin's Creed Valhalla",
       categoria: "Acción/Aventura",
       descripcion: "Sumérgete en la era vikinga mientras lideras a tu clan en incursiones épicas, construyes tu asentamiento y enfrentas desafíos para asegurar un lugar en Valhalla.",
@@ -40,6 +43,7 @@ export class MainPageComponent {
     {
       id:3,
       imagen: "https://cdn.atomix.vg/wp-content/uploads/2017/10/review-rese%C3%B1a-super-mario-odyssey.jpg",
+      numVistas:0,
       nombre: "Super Mario Odyssey",
       categoria: "Plataformas",
       descripcion: "Acompaña a Mario en un viaje por diversos reinos para rescatar a la princesa Peach de Bowser. Utiliza el sombrero mágico, Cappy, para tomar el control de diferentes personajes y objetos.",
@@ -48,6 +52,7 @@ export class MainPageComponent {
     {
       id:4,
       imagen: "https://m.media-amazon.com/images/M/MV5BMGU4ODVkZDYtYjNiNS00YmFiLWFmOWQtODM2NDRjZDAxNzliXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_FMjpg_UX1000_.jpg",
+      numVistas:0,
       nombre: "Cyberpunk 2077",
       categoria: "RPG",
       descripcion: "Explora Night City, un vasto mundo abierto futurista, mientras asumes el papel de V, un mercenario en busca de inmortalidad. Enfrenta decisiones morales y consecuencias impactantes.",
@@ -56,6 +61,7 @@ export class MainPageComponent {
     {
       id:5,
       imagen: "https://m.media-amazon.com/images/M/MV5BMDNkZDVkODEtNjQyYy00NGYwLTljMGQtOTI2MDAwY2ZlOWFmXkEyXkFqcGdeQXVyNjM2MTY3MTY@._V1_.jpg",
+      numVistas:0,
       nombre: "Overwatch",
       categoria: "FPS",
       descripcion: "Únete a un equipo de héroes con habilidades únicas y participa en intensos combates en línea. Trabaja en equipo para cumplir objetivos y asegurar la victoria en este shooter competitivo.",
@@ -64,6 +70,7 @@ export class MainPageComponent {
     {
       id:6,
       imagen: "https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png",
+      numVistas:0,
       nombre: "The Witcher 3: Wild Hunt",
       categoria: "RPG",
       descripcion: "Embárcate en una búsqueda épica como Geralt de Rivia, cazador de monstruos. Explora un mundo abierto lleno de historias intrigantes, criaturas místicas y decisiones morales impactantes.",
@@ -71,6 +78,7 @@ export class MainPageComponent {
     },
     {  id:7,
       imagen: "https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png",
+      numVistas:0,
       nombre: "Minecraft",
       categoria: "Sandbox",
       descripcion: "Construye tu propio mundo en este juego de sandbox. Explora, mina recursos, construye estructuras y enfréntate a peligros en un mundo pixelado lleno de posibilidades.",
@@ -79,6 +87,7 @@ export class MainPageComponent {
     {
       id:8,
       imagen: "https://m.media-amazon.com/images/M/MV5BMGU4ODVkZDYtYjNiNS00YmFiLWFmOWQtODM2NDRjZDAxNzliXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_FMjpg_UX1000_.jpg",
+      numVistas:0,
       nombre: "Cyberpunk 2077",
       categoria: "RPG",
       descripcion: "Explora Night City, un vasto mundo abierto futurista, mientras asumes el papel de V, un mercenario en busca de inmortalidad. Enfrenta decisiones morales y consecuencias impactantes.",
@@ -87,6 +96,7 @@ export class MainPageComponent {
     {
       id:9,
       imagen: "https://m.media-amazon.com/images/M/MV5BMDNkZDVkODEtNjQyYy00NGYwLTljMGQtOTI2MDAwY2ZlOWFmXkEyXkFqcGdeQXVyNjM2MTY3MTY@._V1_.jpg",
+      numVistas:0,
       nombre: "Overwatch",
       categoria: "FPS",
       descripcion: "Únete a un equipo de héroes con habilidades únicas y participa en intensos combates en línea. Trabaja en equipo para cumplir objetivos y asegurar la victoria en este shooter competitivo.",
@@ -95,6 +105,7 @@ export class MainPageComponent {
     {
       id:10,
       imagen: "https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png",
+      numVistas:0,
       nombre: "The Witcher 3: Wild Hunt",
       categoria: "RPG",
       descripcion: "Embárcate en una búsqueda épica como Geralt de Rivia, cazador de monstruos. Explora un mundo abierto lleno de historias intrigantes, criaturas místicas y decisiones morales impactantes.",
@@ -103,6 +114,7 @@ export class MainPageComponent {
     {
       id:11,
       imagen: "https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png",
+      numVistas:0,
       nombre: "Minecraft",
       categoria: "Sandbox",
       descripcion: "Construye tu propio mundo en este juego de sandbox. Explora, mina recursos, construye estructuras y enfréntate a peligros en un mundo pixelado lleno de posibilidades.",
@@ -111,6 +123,7 @@ export class MainPageComponent {
     {
       id:12,
       imagen: "https://m.media-amazon.com/images/M/MV5BMGU4ODVkZDYtYjNiNS00YmFiLWFmOWQtODM2NDRjZDAxNzliXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_FMjpg_UX1000_.jpg",
+      numVistas:0,
       nombre: "Cyberpunk 2077",
       categoria: "RPG",
       descripcion: "Explora Night City, un vasto mundo abierto futurista, mientras asumes el papel de V, un mercenario en busca de inmortalidad. Enfrenta decisiones morales y consecuencias impactantes.",
@@ -119,6 +132,7 @@ export class MainPageComponent {
     {
       id:13,
       imagen: "https://m.media-amazon.com/images/M/MV5BMDNkZDVkODEtNjQyYy00NGYwLTljMGQtOTI2MDAwY2ZlOWFmXkEyXkFqcGdeQXVyNjM2MTY3MTY@._V1_.jpg",
+      numVistas:0,
       nombre: "Overwatch",
       categoria: "FPS",
       descripcion: "Únete a un equipo de héroes con habilidades únicas y participa en intensos combates en línea. Trabaja en equipo para cumplir objetivos y asegurar la victoria en este shooter competitivo.",
@@ -127,6 +141,7 @@ export class MainPageComponent {
     {
       id:14,
       imagen: "https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png",
+      numVistas:0,
       nombre: "The Witcher 3: Wild Hunt",
       categoria: "RPG",
       descripcion: "Embárcate en una búsqueda épica como Geralt de Rivia, cazador de monstruos. Explora un mundo abierto lleno de historias intrigantes, criaturas místicas y decisiones morales impactantes.",
@@ -135,6 +150,7 @@ export class MainPageComponent {
     {
       id:15,
       imagen: "https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png",
+      numVistas:0,
       nombre: "Minecraft",
       categoria: "Sandbox",
       descripcion: "Construye tu propio mundo en este juego de sandbox. Explora, mina recursos, construye estructuras y enfréntate a peligros en un mundo pixelado lleno de posibilidades.",
@@ -143,6 +159,7 @@ export class MainPageComponent {
     {
       id:16,
       imagen: "https://m.media-amazon.com/images/M/MV5BMGU4ODVkZDYtYjNiNS00YmFiLWFmOWQtODM2NDRjZDAxNzliXkEyXkFqcGdeQXVyMTI0MzA4NTgw._V1_FMjpg_UX1000_.jpg",
+      numVistas:0,
       nombre: "Cyberpunk 2077",
       categoria: "RPG",
       descripcion: "Explora Night City, un vasto mundo abierto futurista, mientras asumes el papel de V, un mercenario en busca de inmortalidad. Enfrenta decisiones morales y consecuencias impactantes.",
@@ -151,6 +168,7 @@ export class MainPageComponent {
     {
       id:17,
       imagen: "https://m.media-amazon.com/images/M/MV5BMDNkZDVkODEtNjQyYy00NGYwLTljMGQtOTI2MDAwY2ZlOWFmXkEyXkFqcGdeQXVyNjM2MTY3MTY@._V1_.jpg",
+      numVistas:0,
       nombre: "Overwatch",
       categoria: "FPS",
       descripcion: "Únete a un equipo de héroes con habilidades únicas y participa en intensos combates en línea. Trabaja en equipo para cumplir objetivos y asegurar la victoria en este shooter competitivo.",
@@ -159,6 +177,7 @@ export class MainPageComponent {
     {
       id:18,
       imagen: "https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png",
+      numVistas:0,
       nombre: "The Witcher 3: Wild Hunt",
       categoria: "RPG",
       descripcion: "Embárcate en una búsqueda épica como Geralt de Rivia, cazador de monstruos. Explora un mundo abierto lleno de historias intrigantes, criaturas místicas y decisiones morales impactantes.",
@@ -167,6 +186,7 @@ export class MainPageComponent {
     {
       id:19,
       imagen: "https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png",
+      numVistas:0,
       nombre: "Minecraft",
       categoria: "Sandbox",
       descripcion: "Construye tu propio mundo en este juego de sandbox. Explora, mina recursos, construye estructuras y enfréntate a peligros en un mundo pixelado lleno de posibilidades.",

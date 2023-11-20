@@ -167,6 +167,7 @@ body {
   font-size: 14px;
   color: white;
   margin: 0;
+  user-select: none;
 }
 
 .container-description-comment{
@@ -187,6 +188,7 @@ body {
 
 .like{
   color: white;
+  cursor: pointer;
   font-size: 19px;
 }
 
@@ -216,6 +218,7 @@ body {
   font-size: 20px;
   color: white;
   margin: 0;
+  user-select: none;
 }
 
 .container-gallery{
@@ -267,4 +270,21 @@ transition: .2s linear;
   .main .popup-img{
     width: 95%;
   }
+}
+
+.numVistas{
+  font-size: 14px;
+  color: gray;
+}
+
+.container-vistas{
+  width: auto;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  
+}
+
+.eye{
+  color: grey;
 }
