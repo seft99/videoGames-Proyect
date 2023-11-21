@@ -8,7 +8,7 @@ import { videoGames } from 'src/app/shared/model/videoGames';
   styleUrls: ['./consult-video-game.component.scss'],
 })
 export class ConsultVideoGameComponent {
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
   mostrarPopup = false;
   imagenPopup: string = '';
   currentIndex: number = 0;
@@ -29,37 +29,37 @@ export class ConsultVideoGameComponent {
       'Embárcate en una épica aventura en el vasto reino de Hyrule mientras luchas contra criaturas malévolas y descubres los secretos de este mundo abierto.',
     hovered: false,
   };
-  comentarios:any = [
+  comentarios: any = [
     {
-      user:'JGgaming27615',
+      user: 'JGgaming27615',
       comentario: 'Gran juego, me encanta la historia y los gráficos.',
       fecha: '2023-11-18',
       likes: 25,
       dislikes: 2
     },
     {
-      user:'user2',
+      user: 'user2',
       comentario: 'No estoy seguro de la jugabilidad, podría mejorar.',
       fecha: '2023-11-17',
       likes: 10,
       dislikes: 5
     },
     {
-      user:'user3',
+      user: 'user3',
       comentario: '¡Increíble experiencia multijugador!',
       fecha: '2023-11-16',
       likes: 35,
       dislikes: 1
     },
     {
-      user:'user4',
+      user: 'user4',
       comentario: 'El juego tiene muchos bugs, necesitan parches urgentes.',
       fecha: '2023-11-15',
       likes: 8,
       dislikes: 12
     },
     {
-      user:'user5',
+      user: 'user5',
       comentario: 'Me encanta la imagen del juego. ¿Dónde puedo conseguirlo?',
       fecha: '2023-11-18',
       likes: 15,

@@ -2,11 +2,7 @@
 <div class="main">
   <div class="main-container">
     <div class="container-img-game">
-      <img
-        [src]="videojuego.imagenes[0]"
-        alt="{{ videojuego.nombre }}"
-        class="img"
-      />
+      <img [src]="videojuego.imagenes[0]" alt="{{ videojuego.nombre }}" class="img" />
     </div>
     <div class="container-right">
       <div class="container-up">
@@ -21,10 +17,10 @@
       <div class="container-vistas">
         <mat-icon class="eye">
           visibility
-          </mat-icon>
+        </mat-icon>
         <div class="numVistas">
           vistas 897
-         </div>
+        </div>
       </div>
       <div class="container-category">
         <h3 class="text-category">Genero: {{ videojuego.categoria }}</h3>
@@ -42,12 +38,8 @@
       </div>
 
       <div class="container-description">
-        <textarea
-          class="custom-text-area"
-          placeholder="{{ videojuego.descripcion }}"
-          readonly
-          >{{ videojuego.descripcion }}</textarea
-        >
+        <textarea class="custom-text-area" placeholder="{{ videojuego.descripcion }}"
+          readonly>{{ videojuego.descripcion }}</textarea>
       </div>
 
       <section>

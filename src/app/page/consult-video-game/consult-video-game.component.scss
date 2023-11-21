@@ -6,7 +6,8 @@ body {
 
 .main {
   background-color: black;
-  min-height: 120vh; /* Cambiado de % a vh */
+  min-height: 120vh;
+  /* Cambiado de % a vh */
   padding-top: 30px;
   display: flex;
   justify-content: center;
@@ -37,12 +38,14 @@ body {
   gap: 20px;
   width: 55%;
 }
-.container-up{
+
+.container-up {
   display: flex;
   flex-direction: row;
   gap: 20px;
   align-items: center;
 }
+
 .title-videoGame {
   font-size: 30px;
   font-weight: 700;
@@ -50,18 +53,19 @@ body {
   font-family: "Kdam Thmor Pro", sans-serif;
 }
 
-.number-ranking{
+.number-ranking {
   font-size: 14px;
   font-weight: 700;
   color: white;
 }
-.container-ranking{
+
+.container-ranking {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.star{
+.star {
   width: 20px;
   height: 20px;
 }
@@ -88,7 +92,7 @@ body {
   border-radius: 8px;
 }
 
-.text-category{
+.text-category {
   font-size: 14px;
   color: white;
   margin: 0;
@@ -133,14 +137,15 @@ body {
   cursor: pointer;
 }
 
-.container-comments{
+.container-comments {
   width: 100%;
   height: 300px;
   display: flex;
   flex-direction: column;
   overflow: auto;
 }
-.comentario{
+
+.comentario {
   width: 100%;
   display: flex;
   height: auto;
@@ -151,48 +156,49 @@ body {
   border-bottom: solid white;
 }
 
-.container-sup-comments{
+.container-sup-comments {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-.user-name-comment{
+
+.user-name-comment {
   font-size: 14px;
   color: white;
   font-weight: 700;
   margin: 0;
 }
 
-.date-comment{
+.date-comment {
   font-size: 14px;
   color: white;
   margin: 0;
   user-select: none;
 }
 
-.container-description-comment{
+.container-description-comment {
   width: 100%;
   height: auto;
 }
 
-.description-comment{
+.description-comment {
   font-size: 12px;
   color: white;
 }
 
-.container-inf{
+.container-inf {
   display: flex;
   width: 100px;
   gap: 20px;
 }
 
-.like{
+.like {
   color: white;
   cursor: pointer;
   font-size: 19px;
 }
 
-.container-likes{
+.container-likes {
   width: 70px;
   display: flex;
   flex-direction: row;
@@ -214,40 +220,42 @@ body {
   margin: 0 4px;
 }
 
-.title-comment{
+.title-comment {
   font-size: 20px;
   color: white;
   margin: 0;
   user-select: none;
 }
 
-.container-gallery{
-width: auto;
-height: 100px;
-display: flex;
-gap: 10px;
+.container-gallery {
+  width: auto;
+  height: 100px;
+  display: flex;
+  gap: 10px;
 }
 
-.gallery-img{
+.gallery-img {
   width: 250px;
   height: 100px;
   cursor: pointer;
 }
-.main .container-gallery .gallery-img img{
-height: 100%;
-width: 100%;
-object-fit: cover;
-transition: .2s linear;
+
+.main .container-gallery .gallery-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear;
 }
 
-.main .container-gallery .gallery-img:hover img{
+.main .container-gallery .gallery-img:hover img {
   transform: scale(1.1);
 }
 
-.main .popup-img{
+.main .popup-img {
   position: fixed;
-  top: 0; left: 0;
-  background: rgba(0,0,0,.9);
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .9);
   height: 100%;
   width: 100%;
   z-index: 100;
@@ -256,9 +264,10 @@ transition: .2s linear;
 
 
 
-.main .popup-img img{
+.main .popup-img img {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   border: 5px solid rgb(233, 97, 7);
   border-radius: 5px;
@@ -266,25 +275,25 @@ transition: .2s linear;
   object-fit: contain;
 }
 
-@media (max-width:768px){
-  .main .popup-img{
+@media (max-width:768px) {
+  .main .popup-img {
     width: 95%;
   }
 }
 
-.numVistas{
+.numVistas {
   font-size: 14px;
   color: gray;
 }
 
-.container-vistas{
+.container-vistas {
   width: auto;
   display: flex;
   gap: 5px;
   align-items: center;
-  
+
 }
 
-.eye{
+.eye {
   color: grey;
 }

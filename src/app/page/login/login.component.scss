@@ -1,5 +1,3 @@
-
-
 .background {
   background-image: url(../../../assets/img/games-background.jpg);
   display: flex;
@@ -27,8 +25,7 @@
   user-select: none;
 }
 
-.container-input {
-}
+.container-input {}
 
 .input {
   background-color: black;
@@ -40,6 +37,7 @@
   padding: 10px;
   font-size: 16px;
 }
+
 input::placeholder {
   color: #999;
   font-style: italic;
@@ -60,17 +58,18 @@ input::placeholder {
   user-select: none;
 }
 
-.container-register{
-display: flex;
-align-items: center;
-gap: 5px;
+.container-register {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.text-register{
+
+.text-register {
   font-size: 14px;
   color: white;
 }
 
-.text-register-link{
+.text-register-link {
   font-size: 14px;
   color: rgb(233, 97, 7);
   cursor: pointer;

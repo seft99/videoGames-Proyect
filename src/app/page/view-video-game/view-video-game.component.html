@@ -1,13 +1,6 @@
-<mat-card
-  *ngFor="let videojuego of videoJuegos"
-  [ngClass]="{ active: videojuego.hovered }"
-  (mouseover)="toggleHover(videojuego)"
-  (mouseout)="toggleHover(videojuego)"
-  class="videoGame"
-  (click)="navigateToConsultVideoGame(videojuego)"
-  
-
->
+<mat-card *ngFor="let videojuego of videoJuegos" [ngClass]="{ active: videojuego.hovered }"
+  (mouseover)="toggleHover(videojuego)" (mouseout)="toggleHover(videojuego)" class="videoGame"
+  (click)="navigateToConsultVideoGame(videojuego)">
   <img [src]="videojuego.imagen" alt="{{ videojuego.nombre }}" />
   <div class="overlay">
 
