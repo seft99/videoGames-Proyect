@@ -1,0 +1,103 @@
+.background {
+  inset: 0, 0, 0, 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.container-main {
+  width: 500px;
+  height: 500px;
+  background-color: #050505;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 25px;
+  position: relative;
+}
+
+.background-sup {
+  width: 480px;
+  height: 80px;
+  background-color: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 200px;
+  width: 200px;
+}
+
+.container-title {
+  align-items: start;
+}
+
+.title-register {
+  margin-left: 20px;
+  color: white;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-weight: 400;
+}
+
+.container-input{
+  margin-left: 10px;
+  width: auto;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  background-color: black;
+  outline: white;
+  height: 40px;
+  width: 450px;
+  color: white;
+  border-radius: 40px;
+  padding: 10px;
+  font-size: 16px;
+}
+input::placeholder {
+  color: #999;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.container-button-registrar {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-registrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.text-btn{
+  font-size: 14px;
+  font-weight: 700;
+  color: black ;
+}
+
+.invalid{
+  background-color: #191919;
+  cursor:default;
+}
+.invalid-text{
+  color: rgb(82, 81, 81);
+}
+
