@@ -1,1 +1,87 @@
-<p>register-user works!</p>
+<div class="background">
+  <div class="container-main">
+    <div class="background-sup">
+      <img
+        src="../../../assets/img/Phoenix_Games_letras-removebg-preview (1).png"
+        class="logo"
+      />
+    </div>
+    <span class="container-title">
+      <h1 class="title-register">Registro</h1>
+    </span>
+    <form [formGroup]="form">
+      <div class="container-input">
+        <input
+          type="text"
+          class="input"
+          placeholder="Nombre Usuario"
+          formControlName="userName"
+        />
+        <mat-error
+          *ngIf="
+            form.get('userName')?.hasError('required') &&
+            form.get('userName')?.touched
+          "
+        >
+          Campo Obligatorio
+        </mat-error>
+      </div>
+
+      <div class="container-input">
+        <input
+          type="text"
+          class="input"
+          placeholder="Correo"
+          formControlName="email"
+        />
+        <mat-error
+          *ngIf="
+            form.get('email')?.hasError('required') &&
+            form.get('email')?.touched
+          "
+        >
+          Campo Obligatorio
+        </mat-error>
+        <mat-error
+        *ngIf="
+          form.get('email')?.hasError('pattern') &&
+          form.get('email')?.touched
+        "
+      >
+        Escriba un correo electronico valido
+      </mat-error>
+      </div>
+      <div class="container-input">
+        <input
+          type="password"
+          class="input"
+          placeholder="Contraseña"
+          formControlName="password"
+        />
+        <mat-error
+          *ngIf="
+            form.get('password')?.hasError('required') &&
+            form.get('password')?.touched
+          "
+        >
+          Campo Obligatorio
+        </mat-error>
+      </div>
+
+      <div *ngIf="form.valid">
+        <div class="container-button-registrar">
+          <div class="btn-registrar">
+            <div class="text-btn">Registrar</div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!form.valid">
+        <div class="container-button-registrar">
+          <div class="btn-registrar invalid">
+            <div class="text-btn invalid-text">Registrar</div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

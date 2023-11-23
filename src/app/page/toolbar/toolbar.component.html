@@ -1,5 +1,33 @@
 <div class="main-toolbar">
   <div class="container-toolbar-elements">
- 
+    <div class="icon-back-container" routerLink="/mainPage">
+      <img src="../../../assets/img/Phoenix_Games_letras-removebg-preview (1).png" class="img-icon">
+    </div>
+    <div class="container-login-main">
+      <div class="container-login">
+        <div class="background-user-icon">
+          <img
+            src="../../../assets/img//pngtree-phoenix-flame-flying-png-image_6855516.png"
+            class="img-icon-logo"
+          />
+        </div>
+        <div class="container-user">
+          <div class="userName">SEFT99</div>
+          <div class="email-user">sebas.1910@hotmail.com</div>
+        </div>
+
+        <mat-icon class="moreOptions" [matMenuTriggerFor]="afterMenu">
+          keyboard_arrow_down
+        </mat-icon>
+        <mat-menu #afterMenu="matMenu" xPosition="after">
+          <button mat-menu-item>
+            <p class="menu-options-text">Ver Perfil</p>
+          </button>
+          <button mat-menu-item class="menu-options-text" routerLink="/login">
+            <p class="menu-options-text">Cerrar Sesion</p>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
   </div>
 </div>

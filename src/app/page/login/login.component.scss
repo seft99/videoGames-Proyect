@@ -30,7 +30,7 @@
 .input {
   background-color: black;
   outline: white;
-  height: 22px;
+  height: 40px;
   width: 350px;
   color: white;
   border-radius: 40px;
@@ -58,10 +58,14 @@ input::placeholder {
   user-select: none;
 }
 
-.container-register {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.invalid{
+  background-color: #191919;
+  cursor:default;
+}
+.container-register{
+display: flex;
+align-items: center;
+gap: 5px;
 }
 
 .text-register {
@@ -73,4 +77,21 @@ input::placeholder {
   font-size: 14px;
   color: rgb(233, 97, 7);
   cursor: pointer;
+}
+
+::ng-deep .cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+  opacity: 0.7;
+}
+::ng-deep  .cdk-overlay-dark-backdrop {
+  backdrop-filter: blur(49px);
+}
+
+.input-error{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.invalid-text{
+  color: rgb(82, 81, 81);
 }

@@ -11,6 +11,7 @@ import { ToolbarComponent } from './page/toolbar/toolbar.component';
 import { MaterialImportsModule } from './shared/material-imports/material-imports.module';
 import { ConsultVideoGameComponent } from './page/consult-video-game/consult-video-game.component';
 import { RegisterUserComponent } from './page/register-user/register-user.component';
+import {  ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,16 @@ import { RegisterUserComponent } from './page/register-user/register-user.compon
     ToolbarComponent,
     ConsultVideoGameComponent,
     RegisterUserComponent,
+    
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialImportsModule
+    MaterialImportsModule,
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

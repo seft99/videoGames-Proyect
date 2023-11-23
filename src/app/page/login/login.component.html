@@ -1,31 +1,46 @@
 <div class="background">
-  <div class="container-login">
-    <div class="container-title">
-      LOGIN
-    </div>
-    <div class="container-input">
-      <input type="text" class="input" placeholder="usuario">
-    </div>
-    <div class="container-input">
-      <input type="password" class="input" placeholder="contraseña">
-    </div>
-
-    <div class="btn-log" routerLink="/mainPage">
-      <div class="text-btn">
-        Ingresar
+  <form [formGroup]="form">
+    <div class="container-login">
+      <div class="container-title">LOGIN</div>
+      <!-- HTML -->
+      <div class="input-error">
+        <div class="container-input">
+          <input
+            type="text"
+            class="input"
+            placeholder="usuario"
+            formControlName="email"
+          />
+        </div>
       </div>
-    </div>
-
-    <div class="container-register">
-      <div class="text-register">
-        no tienes cuenta registrate
+      <div class="input-error">
+        <div class="container-input">
+          <input
+            type="password"
+            class="input"
+            placeholder="usuario"
+            formControlName="password"
+          />
+        </div>
       </div>
 
-      <div class="link-register" (click)="navigateToRegisterUser()">
-        <div class="text-register-link">
-          aqui
+      <div *ngIf="form.valid">
+        <div class="btn-log" routerLink="/mainPage">
+          <div class="text-btn">Ingresar</div>
+        </div>
+      </div>
+      <div *ngIf="!form.valid">
+        <div class="btn-log invalid" >
+          <div class="text-btn invalid-text">Ingresar</div>
+        </div>
+      </div>
+
+      <div class="container-register">
+        <div class="text-register">¿No tienes cuenta? Regístrate</div>
+        <div class="link-register" (click)="openModalRegister()">
+          <div class="text-register-link">aquí</div>
         </div>
       </div>
     </div>
-  </div>
+  </form>
 </div>
