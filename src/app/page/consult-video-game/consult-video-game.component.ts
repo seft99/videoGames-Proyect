@@ -12,7 +12,7 @@ export class ConsultVideoGameComponent {
   mostrarPopup = false;
   imagenPopup: string = '';
   currentIndex: number = 0;
-
+  stateAddComment: boolean = false;
   videojuego = {
     id: 0,
     imagenes: [
@@ -74,6 +74,10 @@ export class ConsultVideoGameComponent {
 
   closePopup() {
     this.mostrarPopup = false;
+  }
+
+  changeStateAddComment() {
+    this.stateAddComment = !this.stateAddComment;
   }
 
 }

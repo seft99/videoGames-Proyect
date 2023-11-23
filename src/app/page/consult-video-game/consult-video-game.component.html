@@ -43,8 +43,32 @@
       </div>
 
       <section>
-        <h2 class="title-comment">Comentarios</h2>
+        <div class="container-title-addComments">
+          <h2 class="title-comment">Comentarios</h2>
+
+
+          <div class="btn-addComments" (click)="changeStateAddComment()" *ngIf="stateAddComment === false">
+            <p class="title-btnAdd"> Agregar Comentario </p>
+          </div>
+
+          <div class="btn-addComments" (click)="changeStateAddComment()" *ngIf="stateAddComment === true">
+            <p class="title-btnAdd"> Cancelar </p>
+          </div>
+        </div>
+        
+
         <div class="container-comments">
+
+          <div class="container-add-comment" *ngIf="stateAddComment === true">
+            <div class="textarea-wrapper">
+              <textarea class="custom-text-area" placeholder="Agregue su Comentario"></textarea>
+              <div class="btn-confirm" (click)="changeStateAddComment()">Confirmar</div>
+            </div>
+          </div>
+          
+          
+          
+         
           <div class="comentario" *ngFor="let comentario of comentarios">
             <div class="container-sup-comments">
               <h2 class="user-name-comment">
