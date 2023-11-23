@@ -13,15 +13,15 @@ export class ConsultVideoGameComponent {
   imagenPopup: string = '';
   currentIndex: number = 0;
   stateAddComment: boolean = false;
-  videojuego = {
+  videojuego = { 
     id: 0,
     imagenes: [
-      'https://www.xtrafondos.com/wallpapers/vertical/the-legend-of-zelda-breath-of-the-wild-4064.jpg',
-      'https://i.pinimg.com/originals/27/b7/e1/27b7e1258e4662a226bbd3549e785bf5.jpg',
-      'https://www.xtrafondos.com/descargar.php?id=4065&resolucion=3840x2042',
-      'https://images6.alphacoders.com/805/805656.jpg',
-      'https://i.pcmag.com/imagery/articles/06CFOYIp5AMqXzyoe2m7t1K-1.fit_lim.v1628525694.jpg',
-      'https://wallpaperbat.com/img/1286500-video-game-the-legend-of-zelda-breath-of-the-wild-hd-wallpaper.jpg',
+      'https://image.api.playstation.com/vulcan/img/cfn/11307uYG0CXzRuA9aryByTHYrQLFz-HVQ3VVl7aAysxK15HMpqjkAIcC_R5vdfZt52hAXQNHoYhSuoSq_46_MT_tDBcLu49I.png',
+      'https://i.pinimg.com/736x/40/6d/f7/406df7cc0a0eeaf367b53705a70f2e90.jpg',
+      'https://minecraft-tutos.com/wp-content/uploads/2022/03/fond-ecran-minecraft-enderman-mine-1024x576.jpeg',
+      'https://c4.wallpaperflare.com/wallpaper/948/782/354/minecraft-minecraft-dungeons-ocean-view-minecraft-dungeons-hidden-depths-4k-hd-wallpaper-preview.jpg',
+      'https://images7.alphacoders.com/594/594461.png',
+      'https://coolwallpapers.me/picsup/379353-minecraft-images-for-backgrounds-desktop-free.jpg',
     ],
     nombre: 'The Legend of Zelda: Breath of the Wild',
     categoria: 'Aventura',
