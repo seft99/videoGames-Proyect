@@ -1,9 +1,7 @@
 export interface videoGames {
-  id: number;
-  imagen: string ;
-  numVistas:number;
-  nombre:string;
-  categoria: string;
-  descripcion: string;
-  hovered: boolean;
+  title: string;
+  description: string;
+  image: string [];
+  category: string;
+  hovered: boolean ;
 }

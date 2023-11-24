@@ -5,32 +5,22 @@
       <!-- HTML -->
       <div class="input-error">
         <div class="container-input">
-          <input
-            type="text"
-            class="input"
-            placeholder="usuario"
-            formControlName="email"
-          />
+          <input type="text" class="input" placeholder="email" formControlName="email" />
         </div>
       </div>
       <div class="input-error">
         <div class="container-input">
-          <input
-            type="password"
-            class="input"
-            placeholder="usuario"
-            formControlName="password"
-          />
+          <input type="password" class="input" placeholder="password" formControlName="password" />
         </div>
       </div>
 
-      <div *ngIf="form.valid">
-        <div class="btn-log" routerLink="/mainPage">
+      <div *ngIf="form.valid" >
+        <div class="btn-log"  (click)="validateLogin()">
           <div class="text-btn">Ingresar</div>
         </div>
       </div>
       <div *ngIf="!form.valid">
-        <div class="btn-log invalid" >
+        <div class="btn-log invalid">
           <div class="text-btn invalid-text">Ingresar</div>
         </div>
       </div>

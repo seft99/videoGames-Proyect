@@ -12,6 +12,7 @@ import { MaterialImportsModule } from './shared/material-imports/material-import
 import { ConsultVideoGameComponent } from './page/consult-video-game/consult-video-game.component';
 import { RegisterUserComponent } from './page/register-user/register-user.component';
 import {  ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {  ReactiveFormsModule } from '@angular/forms';
     ConsultVideoGameComponent,
     RegisterUserComponent,
     
+    
 
   ],
   imports: [
@@ -31,6 +33,7 @@ import {  ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MaterialImportsModule,
     ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],

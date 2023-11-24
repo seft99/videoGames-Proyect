@@ -16,11 +16,11 @@ const routes: Routes = [
     component:LoginComponent,
   },
   {
-    path:'mainPage',
+    path:'mainPage/:id',
     component:MainPageComponent,
   },
   {
-    path:'consultVideoGame/:id',
+    path:'consultVideoGame/:idUser/:idVideoGame',
     component:ConsultVideoGameComponent,
   },
   {

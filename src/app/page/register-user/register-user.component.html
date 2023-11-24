@@ -15,7 +15,7 @@
           type="text"
           class="input"
           placeholder="Nombre Usuario"
-          formControlName="userName"
+          formControlName="username"
         />
         <mat-error
           *ngIf="
@@ -70,11 +70,12 @@
 
       <div *ngIf="form.valid">
         <div class="container-button-registrar">
-          <div class="btn-registrar">
+          <div class="btn-registrar" (click)="registerUser()">
             <div class="text-btn">Registrar</div>
           </div>
         </div>
       </div>
+      
       <div *ngIf="!form.valid">
         <div class="container-button-registrar">
           <div class="btn-registrar invalid">

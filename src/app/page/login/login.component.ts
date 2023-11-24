@@ -4,7 +4,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { RegisterUserComponent } from '../register-user/register-user.component';
 import { ModalService } from 'src/assets/services/modal-service.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { LoginService } from 'src/app/shared/services/login/login.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,8 +13,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  form! : FormGroup
-  constructor(private dialog: MatDialog, private modalService: ModalService, private fb : FormBuilder) {
+  form!: FormGroup;
+  idUser!: string;
+  constructor(private dialog: MatDialog, private modalService: ModalService, private fb: FormBuilder, private loginService: LoginService,private route: ActivatedRoute, private router: Router) {
 
     this.form = this.fb.group({
       email: ['', Validators.required],
@@ -21,8 +23,21 @@ export class LoginComponent {
     })
   }
 
+  validateLogin() {
+    if (this.form.valid) {
+      const email = this.form.get('email')?.value;
+      const password = this.form.get('password')?.value;
+      this.loginService.authenticateUser(email, password)
+        .subscribe(response => {
+          this.idUser = response.id;
+          this.navigateToMaingPage()
+        },);
+    }
+  }
 
-
+  navigateToMaingPage() {
+    this.router.navigate(['/mainPage',this.idUser]);
+  }
   openModalRegister(): void {
     this.modalService.setBlurState(true); // Activa el desenfoque
     const dialogRef = this.dialog.open(RegisterUserComponent, {

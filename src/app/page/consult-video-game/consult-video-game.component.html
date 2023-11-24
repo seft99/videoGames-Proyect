@@ -2,12 +2,12 @@
 <div class="main">
   <div class="main-container">
     <div class="container-img-game">
-      <img [src]="videojuego.imagenes[0]" alt="{{ videojuego.nombre }}" class="img" />
+      <img [src]="dataGame.image[0]" alt="{{ dataGame.title }}" class="img" />
     </div>
     <div class="container-right">
       <div class="container-up">
         <div class="title-videoGame">
-          {{ videojuego.nombre }}
+          {{ dataGame.title }}
         </div>
         <div class="container-ranking">
           <div class="number-ranking">4,5</div>
@@ -23,11 +23,11 @@
         </div>
       </div>
       <div class="container-category">
-        <h3 class="text-category">Genero: {{ videojuego.categoria }}</h3>
+        <h3 class="text-category">Genero: {{ dataGame.category }}</h3>
       </div>
 
       <div class="container-gallery">
-        <div class="gallery-img" *ngFor="let imagen of videojuego.imagenes.slice(1)" (click)="openPopup(imagen)">
+        <div class="gallery-img" *ngFor="let imagen of dataGame.image.slice(1)" (click)="openPopup(imagen)">
           <img [src]="imagen" />
         </div>
       </div>
@@ -38,8 +38,7 @@
       </div>
 
       <div class="container-description">
-        <textarea class="custom-text-area" placeholder="{{ videojuego.descripcion }}"
-          readonly>{{ videojuego.descripcion }}</textarea>
+        <textarea class="custom-text-area" readonly>{{ dataGame.description }}</textarea>
       </div>
 
       <section>
@@ -54,22 +53,19 @@
           <div class="btn-addComments" (click)="changeStateAddComment()" *ngIf="stateAddComment === true">
             <p class="title-btnAdd"> Cancelar </p>
           </div>
+
         </div>
-        
-
         <div class="container-comments">
-
           <div class="container-add-comment" *ngIf="stateAddComment === true">
+            <fomr [formGroup]="form">
             <div class="textarea-wrapper">
-              <textarea class="custom-text-area" placeholder="Agregue su Comentario"></textarea>
-              <div class="btn-confirm" (click)="changeStateAddComment()">Confirmar</div>
+              <textarea class="custom-text-area" placeholder="Agregue su Comentario"
+                formControlName="comment"></textarea>
+              <div class="btn-confirm" (click)="postComments()">Confirmar</div>
             </div>
+          </fomr>
           </div>
-          
-          
-          
-         
-          <div class="comentario" *ngFor="let comentario of comentarios">
+          <!-- <div class="comentario" *ngFor="let comentario of comentarios"> 
             <div class="container-sup-comments">
               <h2 class="user-name-comment">
                 {{ comentario.user }}
@@ -97,7 +93,7 @@
                 <mat-icon class="like"> thumb_down </mat-icon>
               </div>
             </div>
-          </div>
+          </div>-->
         </div>
       </section>
     </div>

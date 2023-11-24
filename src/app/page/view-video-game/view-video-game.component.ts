@@ -8,14 +8,19 @@ import { videoGames } from 'src/app/shared/model/videoGames';
   styleUrls: ['./view-video-game.component.scss'],
 })
 export class ViewVideoGameComponent implements OnInit {
-  @Input() videoJuegos: videoGames[] = [];
+  @Input() videoJuegos: any;
+  userId!: string;
   @Output() hoverChanged = new EventEmitter<videoGames>();
 
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-
+    this.route.params.subscribe(params => {
+      this.userId = params['id'];
+    })
+ console.log('idUsuario', this.userId)
+    
   }
 
   toggleHover(videojuego: videoGames) {
@@ -23,12 +28,11 @@ export class ViewVideoGameComponent implements OnInit {
     this.hoverChanged.emit(videojuego);
   }
 
-  navigateToConsultVideoGame(videojuego: videoGames) {
-    const videojuegoId = videojuego.id;
-    this.router.navigate(['/consultVideoGame', videojuegoId]);
+  navigateToConsultVideoGame(id: string) {
+    this.router.navigate(['/consultVideoGame',this.userId, id]);
   }
 
-  aumentarVistas(){
+  aumentarVistas() {
     this.videoJuegos
   }
 }
