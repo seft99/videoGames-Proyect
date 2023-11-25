@@ -15,6 +15,7 @@ export class LoginService {
     const url = `${this.baseUrl}/login`; 
     const credentials = { email, password };
     return this.http.post(url, credentials);
+    
   }
 
   registerUser(email: string, password: string, username: string){

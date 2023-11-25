@@ -1,9 +1,12 @@
 
 <div class="main">
+  
   <img src="../../../assets/img/Phoenix_Games-removebg-preview (1).png" alt="no esfdae" class="ubi-logo" />
   <div class="container-right">
     <div class="container-login-main">
       <div class="container-login">
+        
+        <div class="contaier-login-left">
         <div class="background-user-icon">
           <img
             src="../../../assets/img/pngtree-phoenix-flame-flying-png-image_6855516.png"
@@ -11,37 +14,41 @@
           />
         </div>
         <div class="container-user">
-          <div class="userName">SEFT99</div>
-          <div class="email-user">sebas.1910@hotmail.com</div>
+          <div class="userName">{{dataUserLocalStorage.username}}</div>
+          <div class="email-user">{{dataUserLocalStorage.email}}</div>
         </div>
+        </div>
+
 
         <mat-icon class="moreOptions" [matMenuTriggerFor]="afterMenu">
           keyboard_arrow_down
         </mat-icon>
         <mat-menu #afterMenu="matMenu" xPosition="after">
-          <button mat-menu-item>
-            <p class="menu-options-text">Ver Perfil</p>
-          </button>
-          <button mat-menu-item class="menu-options-text" routerLink="/login">
+          <button mat-menu-item class="menu-options-text" routerLink="/login" (click)="clearLocalStorage()">
             <p class="menu-options-text">Cerrar sesion</p>
           </button>
         </mat-menu>
       </div>
     </div>
-    <div class="container-list-video-game gridclass">
-      <div class="container-categories">
-        <div *ngFor="let categorias of categoriasUnicas">
-          <div class="button-Categories" (click)="saveCategorie(categorias)">
-            <p class="text-categories">
-              {{ categorias }}
-            </p>
-          </div>
+
+    <div class="container-categories">
+      <div *ngFor="let categoria of categoriasUnicas" >
+        <div class="button-Categories" (click)="saveCategorie(categoria)">
+          <p class="text-categories">
+            {{ categoria }}
+          </p>
         </div>
       </div>
+    </div>
+
+
+    <div class="container-list-video-game gridclass">
+
       <app-view-video-game
         class="container"
-        [videoJuegos]="dataGames"
         (hoverChanged)="handleHoverChange($event)"
+        
+        [videoJuegos]="dataGames"
       />
     </div>
   </div>

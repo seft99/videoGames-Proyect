@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { videoGames } from 'src/app/shared/model/videoGames';
+import { VideoGamesService } from 'src/app/shared/services/games/videoGames.service';
 
 @Component({
   selector: 'app-view-video-game',
@@ -13,15 +14,14 @@ export class ViewVideoGameComponent implements OnInit {
   @Output() hoverChanged = new EventEmitter<videoGames>();
 
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, private gameService:VideoGamesService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.userId = params['id'];
+      
     })
- console.log('idUsuario', this.userId)
-    
-  }
+ console.log('idUsuario', this.userId) }
 
   toggleHover(videojuego: videoGames) {
     videojuego.hovered = !videojuego.hovered;
@@ -30,9 +30,10 @@ export class ViewVideoGameComponent implements OnInit {
 
   navigateToConsultVideoGame(id: string) {
     this.router.navigate(['/consultVideoGame',this.userId, id]);
+  
   }
 
-  aumentarVistas() {
-    this.videoJuegos
-  }
+
+
+
 }

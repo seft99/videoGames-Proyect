@@ -26,5 +26,17 @@ postComments(idUser: string, idVideoGame: string, commentary: string){
   return this.http.post(url, credentials);
 }
 
+incViewGame(idVideoGame: string){
+  const url = `${this.baseUrl}/games/view/${idVideoGame}`
+  return  this.http.get(url)
+}
+
+addComment(gameId: string, comment: string): Observable<any> {
+  const url = `http://localhost:4000/api/games/${gameId}/comment`;
+  return this.http.post(url, {
+    username: 'zab',
+    content: comment
+  });
+}
 
 }

@@ -31,6 +31,12 @@
           <div class="text-register-link">aquí</div>
         </div>
       </div>
+
+      <div class="container-error" *ngIf="error === true">
+        <div class="text-error">
+          usuario o contraseña incorrectos
+        </div>
+      </div>
     </div>
   </form>
 </div>

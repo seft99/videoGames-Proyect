@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { videoGames } from 'src/app/shared/model/videoGames';
 import { VideoGamesService } from 'src/app/shared/services/games/videoGames.service';
-
+import {  FormControl } from '@angular/forms';
 @Component({
   selector: 'app-consult-video-game',
   templateUrl: './consult-video-game.component.html',
@@ -32,25 +32,32 @@ export class ConsultVideoGameComponent implements OnInit {
       this.idUser = params['idUser']
     })
     console.log('id', this.videoGameId);
-    this.getVideoGameId()
+    this.updateView()
   }
 
-  getVideoGameId() {
+  updateView() {
+    this.gameService.incViewGame(this.videoGameId).subscribe((response)=>{
+      console.log(response)
+      this.getVideoGameId()
+    })
    
+  }
+  getVideoGameId() {
     this.gameService.getVideoGamesById(this.videoGameId).subscribe((data) => {
       this.dataGame = data;
       console.log('evideee', this.dataGame)
-   
     })
   }
 
   postComments(){
     const comment = this.form.get('comment')?.value;
-    this.gameService.postComments(this.idUser, this.dataGame, comment).subscribe(()=>{
+    console.log('comment', comment)
+    this.gameService.addComment(this.videoGameId, comment).subscribe(()=>{
       this.changeStateAddComment()
     })
   }
 
+ 
   openPopup(imagen: string) {
     this.imagenPopup = imagen;
     this.mostrarPopup = true;
@@ -64,4 +71,6 @@ export class ConsultVideoGameComponent implements OnInit {
     this.stateAddComment = !this.stateAddComment;
   }
 
+  
+ 
 }

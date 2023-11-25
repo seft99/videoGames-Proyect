@@ -19,7 +19,7 @@
           visibility
         </mat-icon>
         <div class="numVistas">
-          vistas 897
+          {{dataGame.view}} vistas
         </div>
       </div>
       <div class="container-category">
@@ -44,12 +44,9 @@
       <section>
         <div class="container-title-addComments">
           <h2 class="title-comment">Comentarios</h2>
-
-
           <div class="btn-addComments" (click)="changeStateAddComment()" *ngIf="stateAddComment === false">
             <p class="title-btnAdd"> Agregar Comentario </p>
           </div>
-
           <div class="btn-addComments" (click)="changeStateAddComment()" *ngIf="stateAddComment === true">
             <p class="title-btnAdd"> Cancelar </p>
           </div>
@@ -57,13 +54,17 @@
         </div>
         <div class="container-comments">
           <div class="container-add-comment" *ngIf="stateAddComment === true">
-            <fomr [formGroup]="form">
+
             <div class="textarea-wrapper">
-              <textarea class="custom-text-area" placeholder="Agregue su Comentario"
+              <form [formGroup]="form">
+                <textarea class="custom-text-area" placeholder="Agregue su Comentario"
                 formControlName="comment"></textarea>
+              </form>
+            
+
               <div class="btn-confirm" (click)="postComments()">Confirmar</div>
             </div>
-          </fomr>
+
           </div>
           <!-- <div class="comentario" *ngFor="let comentario of comentarios"> 
             <div class="container-sup-comments">
