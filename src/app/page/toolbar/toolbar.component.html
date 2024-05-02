@@ -1,19 +1,22 @@
 <div class="main-toolbar">
-  <div class="container-toolbar-elements">
-    <div class="icon-back-container" routerLink="/mainPage">
-      <img src="../../../assets/img/Phoenix_Games_letras-removebg-preview (1).png" class="img-icon">
+
+  <div class="main-toolbar__container-left">
+    <div class="main-toolbar__container-left__icon-back-container" routerLink="/mainPage">
+      <img src="../../../assets/img/logo.png" class="main-toolbar__container-left__icon-back-container__img-icon">
     </div>
-    <div class="container-login-main">
-      <div class="container-login">
-        <div class="background-user-icon">
+    <div class="main-toolbar__container-left__title">Phoenix Games</div>
+  </div>
+
+    <div class="main-toolbar__container-login">
+        <div class="main-toolbar__container-login__background-user-icon">
           <img
             src="../../../assets/img//pngtree-phoenix-flame-flying-png-image_6855516.png"
-            class="img-icon-logo"
+            class="main-toolbar__container-login__background-user-icon__img-icon-logo"
           />
         </div>
-        <div class="container-user">
-          <div class="userName">SEFT99</div>
-          <div class="email-user">sebas.1910@hotmail.com</div>
+        <div class="main-toolbar__container-login__container-user">
+          <div class="main-toolbar__container-login__container-user__userName">SEFT99</div>
+          <div class="main-toolbar__container-login__container-user__email-user">sebas.1910@hotmail.com</div>
         </div>
 
         <mat-icon class="moreOptions" [matMenuTriggerFor]="afterMenu">
@@ -27,7 +30,8 @@
             <p class="menu-options-text">Cerrar Sesion</p>
           </button>
         </mat-menu>
-      </div>
     </div>
-  </div>
+
 </div>
+
+

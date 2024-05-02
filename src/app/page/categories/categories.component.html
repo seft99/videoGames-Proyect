@@ -1,0 +1,6 @@
+<div class="main">
+  <div class="main__mainCategory">Categorias</div>
+  <div class="main__mainCategory__containerCategories" *ngFor="let category of categories" (click)="emitCategory(category)">
+      {{category}}
+  </div>
+</div>

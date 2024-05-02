@@ -1,48 +1,23 @@
-
 <div class="main">
-  <img src="../../../assets/img/Phoenix_Games-removebg-preview (1).png" alt="no esfdae" class="ubi-logo" />
-  <div class="container-right">
-    <div class="container-login-main">
-      <div class="container-login">
-        <div class="background-user-icon">
-          <img
-            src="../../../assets/img/pngtree-phoenix-flame-flying-png-image_6855516.png"
-            class="img-icon-logo"
-          />
-        </div>
-        <div class="container-user">
-          <div class="userName">SEFT99</div>
-          <div class="email-user">sebas.1910@hotmail.com</div>
-        </div>
 
-        <mat-icon class="moreOptions" [matMenuTriggerFor]="afterMenu">
-          keyboard_arrow_down
-        </mat-icon>
-        <mat-menu #afterMenu="matMenu" xPosition="after">
-          <button mat-menu-item>
-            <p class="menu-options-text">Ver Perfil</p>
-          </button>
-          <button mat-menu-item class="menu-options-text" routerLink="/login">
-            <p class="menu-options-text">Cerrar sesion</p>
-          </button>
-        </mat-menu>
-      </div>
+
+
+  <section class="main__container-up">
+    <app-toolbar />
+    <!-- <app-carousel [autoSlide]="true" /> -->
+    <img src="../../../assets/img/GAMES_PRINCIPAL.png" class="main__container-up__img">
+    <div class="main__container-up__background"> </div>
+  </section>
+  <section class="main__body">
+    <div class="main__body__container-left">
+      <app-categories (saveCategories)="handleSelectCategory($event)"/>
     </div>
-    <div class="container-list-video-game gridclass">
-      <div class="container-categories">
-        <div *ngFor="let categorias of categoriasUnicas">
-          <div class="button-Categories" (click)="saveCategorie(categorias)">
-            <p class="text-categories">
-              {{ categorias }}
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="main__body__container-right">
       <app-view-video-game
-        class="container"
-        [videoJuegos]="videojuegos"
+        class="main__body__container-right__videoGames"
         (hoverChanged)="handleHoverChange($event)"
+        [categoriaSeleccionada]="category"
       />
     </div>
-  </div>
+  </section>
 </div>
