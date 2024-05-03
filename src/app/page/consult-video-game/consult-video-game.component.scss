@@ -10,89 +10,218 @@ body {
   padding-top: 30px;
   display: flex;
   justify-content: center;
+  padding-top: 4rem;
+  &__main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-top: 2px solid orange;
+    padding-top: 2rem;
+    &__container-img-game {
+      margin-left: 20px;
+      width: 35%;
+      height: 100%;
+      &__img {
+        width: 100%;
+      }
+    }
+    &__container-right {
+      display: flex;
+      margin-left: 50px;
+      flex-direction: column;
+      gap: 20px;
+      width: 55%;
+      &__container-up {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+      }
+      &__title-videoGame {
+        font-size: 30px;
+        font-weight: 700;
+        color: white;
+        font-family: "Kdam Thmor Pro", sans-serif;
+      }
+
+      &__container-infoGame{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        &__container-vistas {
+          width: auto;
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          &__numVistas {
+            font-size: 14px;
+            color: gray;
+          }
+        }
+        &__container-ranking {
+          display: flex;
+          flex-direction: row;
+          color: white;
+          gap: 5px;
+
+          &__number-ranking {
+            font-size: 14px;
+            color: white;
+          }
+          &__numbCalificaciones {
+            color: gray;
+          }
+        }
+        &__container-category{
+          display: flex;
+          width: max-content;
+          &__title{
+            font-size: 14px;
+            color: white;
+          }
+          &__text-category {
+            font-size: 14px;
+            color: white;
+            margin: 0;
+          }
+
+        }
+
+        &__container-plataformas{
+          display: flex;
+          flex-direction: row;
+          gap: 5px;
+          &__plataforma{
+            font-size: 12px;
+            color: white;
+          }
+        }
+      }
+
+      &__video {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+      &__container-gallery {
+        width: auto;
+        height: 100px;
+        display: flex;
+        gap: 10px;
+      }
+      &__gallery-img {
+        width: 250px;
+        height: 100px;
+        cursor: pointer;
+      }
+      &__container-description {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__custom-text-area {
+          display: flex;
+          width: 100%;
+          background: transparent;
+          height: 120px;
+          resize: none;
+          outline: none;
+          padding: 10px;
+          justify-content: flex-start;
+          color: white;
+          border: solid white;
+          height: 120px;
+          border-radius: 8px;
+        }
+      }
+      &__container-title-comments{
+        width: max-content;
+        padding: 0px 20px;
+        background-color: orange;
+        border-radius: 12px 12px 0 0;
+        &__title-comment {
+          font-size: 20px;
+          color: black;
+          margin: 0;
+          user-select: none;
+          font-weight: 700;
+        }
+      }
+
+      &__container-comments {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border: 1px solid orange;
+        margin-bottom: 1rem;
+        padding: 10px 0;
+        &__comentario {
+          display: flex;
+          height: auto;
+          background-color: black;
+          padding: 20px;
+          flex-direction: column;
+          gap: 2px;
+          border-bottom: solid white;
+
+          &__container-sup-comments {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            &__user-name-comment {
+              font-size: 14px;
+              color: white;
+              font-weight: 700;
+              margin: 0;
+            }
+            &__date-comment {
+              font-size: 14px;
+              color: white;
+              margin: 0;
+              user-select: none;
+            }
+          }
+
+          &__container-description-comment {
+            width: 100%;
+            height: auto;
+            &__description-comment {
+              font-size: 12px;
+              color: white;
+            }
+          }
+          &__container-inf {
+            display: flex;
+            width: 100px;
+            gap: 20px;
+            &__container-likes {
+              width: 70px;
+              display: flex;
+              flex-direction: row;
+              gap: 5px;
+              align-items: end;
+              justify-content: center;
+
+              &__like {
+                color: white;
+                cursor: pointer;
+                font-size: 19px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-.main-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
 
-.container-img-game {
-  margin-left: 20px;
-  width: 35%;
-  height: 100%;
 
-}
-
-.img {
-  width: 100%;
-  height: 720px;
-}
-
-.container-right {
-  display: flex;
-  margin-left: 50px;
-  flex-direction: column;
-  gap: 20px;
-  width: 55%;
-}
-.container-up{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
-}
-.title-videoGame {
-  font-size: 30px;
-  font-weight: 700;
-  color: white;
-  font-family: "Kdam Thmor Pro", sans-serif;
-}
-
-.number-ranking{
-  font-size: 14px;
-  font-weight: 700;
-  color: white;
-}
-.container-ranking{
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.star{
-  width: 20px;
-  height: 20px;
-}
-
-.container-description {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.custom-text-area {
-  display: flex;
-  width: 100%;
-  background: transparent;
-  height: 120px;
-  resize: none;
-  outline: none;
-  padding: 10px;
-  justify-content: flex-start;
-  color: white;
-  border: solid white;
-  height: 120px;
-  border-radius: 8px;
-}
-
-.text-category{
-  font-size: 14px;
-  color: white;
-  margin: 0;
-}
 
 
 .gallery {
@@ -101,164 +230,54 @@ body {
   gap: 10px;
 }
 
-.thumbnail {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
+.main__main-container__container-right__container-comments::-webkit-scrollbar {
+  scrollbar-width: thin;
+  width: 14px; /* Ancho del scrollbar */
 }
 
-.expanded-container {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+.main__main-container__container-right__container-comments::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0);
+  border-radius: 12px;
+}
+
+.main__main-container__container-right__container-comments::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  border: 5px solid rgb(0, 0, 0); /* Borde del thumb */
+  background-color: rgb(255, 115, 1);
+}
+
+
+.main
+  .main__main-container__container-right__container-gallery
+  .main__main-container__container-right__gallery-img
+  img {
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  align-items: center;
-  justify-content: center;
-}
-
-.expanded-image {
-  max-width: 80%;
-  max-height: 80%;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-.container-comments{
   width: 100%;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-}
-.comentario{
-  width: 100%;
-  display: flex;
-  height: auto;
-  background-color: black;
-  padding: 20px;
-  flex-direction: column;
-  gap: 2px;
-  border-bottom: solid white;
+  object-fit: cover;
+  transition: 0.2s linear;
 }
 
-.container-sup-comments{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-.user-name-comment{
-  font-size: 14px;
-  color: white;
-  font-weight: 700;
-  margin: 0;
-}
-
-.date-comment{
-  font-size: 14px;
-  color: white;
-  margin: 0;
-  user-select: none;
-}
-
-.container-description-comment{
-  width: 100%;
-  height: auto;
-}
-
-.description-comment{
-  font-size: 12px;
-  color: white;
-}
-
-.container-inf{
-  display: flex;
-  width: 100px;
-  gap: 20px;
-}
-
-.like{
-  color: white;
-  cursor: pointer;
-  font-size: 19px;
-}
-
-.container-likes{
-  width: 70px;
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  align-items: end;
-  justify-content: center;
-}
-
-.container-comments::-webkit-scrollbar {
-  width: 7px;
-  border-radius: 8px;
-  background: var(--B500, #33474C);
-}
-
-.container-comments::-webkit-scrollbar-thumb {
-  width: 8px;
-  border-radius: 8px;
-  background-color: #030301;
-  margin: 0 4px;
-}
-
-.title-comment{
-  font-size: 20px;
-  color: white;
-  margin: 0;
-  user-select: none;
-}
-
-.container-gallery{
-width: auto;
-height: 100px;
-display: flex;
-gap: 10px;
-}
-
-.gallery-img{
-  width: 250px;
-  height: 100px;
-  cursor: pointer;
-}
-.main .container-gallery .gallery-img img{
-height: 100%;
-width: 100%;
-object-fit: cover;
-transition: .2s linear;
-}
-
-.main .container-gallery .gallery-img:hover img{
+.main
+  .main__main-container__container-right__container-gallery
+  .main__main-container__container-right__gallery-img:hover
+  img {
   transform: scale(1.1);
 }
 
-.main .popup-img{
+.main .popup-img {
   position: fixed;
-  top: 0; left: 0;
-  background: rgba(0,0,0,.9);
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
   height: 100%;
   width: 100%;
   z-index: 100;
-
 }
 
-
-
-.main .popup-img img{
+.main .popup-img img {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   border: 5px solid rgb(233, 97, 7);
   border-radius: 5px;
@@ -266,25 +285,12 @@ transition: .2s linear;
   object-fit: contain;
 }
 
-@media (max-width:768px){
-  .main .popup-img{
+@media (max-width: 768px) {
+  .main .popup-img {
     width: 95%;
   }
 }
 
-.numVistas{
-  font-size: 14px;
-  color: gray;
-}
-
-.container-vistas{
-  width: auto;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-
-}
-
-.eye{
+.eye {
   color: grey;
 }

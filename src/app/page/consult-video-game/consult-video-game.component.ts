@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { videoGames } from 'src/app/shared/model/videoGames';
 import { ApiService } from 'src/app/shared/services/api.service';
@@ -8,19 +8,20 @@ import { ApiService } from 'src/app/shared/services/api.service';
   templateUrl: './consult-video-game.component.html',
   styleUrls: ['./consult-video-game.component.scss'],
 })
-export class ConsultVideoGameComponent implements OnInit  {
+export class ConsultVideoGameComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
-    private servideVideoGames: ApiService
+    private serviceVideoGames: ApiService,
+    private elementReft: ElementRef
   ) {}
   mostrarPopup = false;
   imagenPopup: string = '';
   currentIndex: number = 0;
-  game!: videoGames ;
+  game!: videoGames;
   id!: number;
 
-
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     const idString = this.route.snapshot.paramMap.get('id');
     if (idString !== null) {
       this.id = parseInt(idString, 10);
@@ -28,11 +29,29 @@ export class ConsultVideoGameComponent implements OnInit  {
     }
   }
 
-  getVideoGameById(idGame:number){
-    this.servideVideoGames.getGameById(idGame).subscribe(data =>{
+  getVideoGameById(idGame: number) {
+
+    this.serviceVideoGames.getGameById(idGame).subscribe((data) => {
       this.game = data;
-    })
+      const div: HTMLElement =
+        this.elementReft.nativeElement.querySelector('#video');
+      div.innerHTML = this.game.video;
+      this.updateNumVistas(this.game);
+
+      console.log('game',this.game);
+    });
   }
+
+  updateNumVistas(videoGame: videoGames) {
+    videoGame.numVistas = (videoGame.numVistas || 0) + 1; // Aumentamos el número de vistas
+    this.serviceVideoGames.updateNumVistas(videoGame).subscribe(() => {
+
+    }, (error) => {
+
+    });
+  }
+
+
   comentarios: any = [
     {
       user: 'JGgaming27615',

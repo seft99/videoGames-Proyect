@@ -1,6 +1,11 @@
 <div class="main">
   <div class="main__mainCategory">Categorias</div>
-  <div class="main__mainCategory__containerCategories" *ngFor="let category of categories" (click)="emitCategory(category)">
-      {{category}}
+  <div *ngFor="let category of saveArray; let index = index">
+    <div
+      class="main__mainCategory__containerCategories" [ngClass]="{selected: category.select}"
+      (click)="emitCategory(category, index)"
+    >
+      {{ category.categoria }}
+    </div>
   </div>
 </div>

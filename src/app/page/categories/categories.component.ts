@@ -10,6 +10,11 @@ export interface Videojuego {
   descripcion: string;
   hovered: boolean;
 }
+
+export interface category{
+  categoria: string;
+  select?: boolean;
+}
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
@@ -18,9 +23,11 @@ export interface Videojuego {
 export class CategoriesComponent implements OnInit {
   categories: string[] = [];
   dataVideoGames!: videoGames[];
-  categoriaSelect!: string;
+  categoriaSelect!: category;
+  saveArray: category[] =[];
   @Output() saveCategories = new EventEmitter<string>();
-  constructor(private serviceVideoGames: ApiService) {}
+  constructor(private serviceVideoGames: ApiService) {};
+
 
   ngOnInit() {
     this.getAllCategories();
@@ -29,18 +36,31 @@ export class CategoriesComponent implements OnInit {
   getAllCategories() {
     this.serviceVideoGames.getDataVideogames().subscribe((data) => {
       this.dataVideoGames = data;
+
       const allCategories = this.dataVideoGames.map(videojuego => videojuego.categoria);
       this.categories = allCategories.filter((categoria, index, self) => self.indexOf(categoria) === index);
+      this.categories.forEach((cat)=>{
+        this.saveArray.push({ categoria : cat , select : false});
+      })
     });
+
   }
 
 
-  emitCategory(categoria: any) {
-    if (this.categoriaSelect === categoria) {
-      this.categoriaSelect = '';
-    } else {
-      this.categoriaSelect = categoria;
+  emitCategory(categoria: category, indice: number): void {
+    if (!categoria.select) {
+      this.saveArray.forEach(category  =>{
+        category.select = false;
+      });
+      this.saveArray[indice].select = true;
+      this.saveCategories.emit(categoria.categoria);
+    }else{
+      this.saveArray.forEach(category  =>{
+        category.select = false;
+      });
+      this.saveCategories.emit('');
     }
-    this.saveCategories.emit(this.categoriaSelect);
+
+
   }
 }

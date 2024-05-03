@@ -31,7 +31,7 @@
   }
 
 
-  .main__mainCategory__containerCategories:hover {
+  .main__mainCategory__containerCategories:hover, .selected {
     background: rgb(0, 0, 0);
     background: linear-gradient(
       90deg,
@@ -42,16 +42,6 @@
     color: black;
   }
 
-  .main__mainCategory__containerCategories:visited{
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(255, 139, 0, 1) 50%,
-      rgba(0, 0, 0, 1) 100%
-    );
-    color: black;
-  }
 }
 
 @media(max-width:819px){

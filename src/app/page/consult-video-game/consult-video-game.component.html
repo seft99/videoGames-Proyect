@@ -1,84 +1,112 @@
-
+<app-toolbar />
 <div class="main">
-  <div class="main-container">
-    <div class="container-img-game">
-      <img
-        [src]="game.imagen[0]"
-        alt="{{ game.nombre }}"
-        class="img"
-      />
+  <div class="main__main-container">
+    <div class="main__main-container__container-img-game">
+      <img [src]="game.imagen[0]" alt="{{ game.nombre }}" class="main__main-container__container-img-game__img" />
     </div>
-    <div class="container-right">
-      <div class="container-up">
-        <div class="title-videoGame">
+    <div class="main__main-container__container-right">
+      <div class="main__main-container__container-right__container-up">
+        <div class="main__main-container__container-right__title-videoGame">
           {{ game.nombre }}
         </div>
-        <div class="container-ranking">
-          <div class="number-ranking">4,5</div>
-          <img class="star" src="../../../assets/img/STAR.png" />
-        </div>
-      </div>
-      <div class="container-vistas">
-        <mat-icon class="eye">
-          visibility
-          </mat-icon>
-        <div class="numVistas">
-          vistas 897
-         </div>
-      </div>
-      <div class="container-category">
-        <h3 class="text-category">Genero: {{ game.categoria }}</h3>
       </div>
 
-      <div class="container-gallery">
-        <div class="gallery-img" *ngFor="let imagen of game.imagen.slice(1)" (click)="openPopup(imagen)">
+      <div class="main__main-container__container-right__container-infoGame">
+        <div class="main__main-container__container-right__container-infoGame__container-vistas">
+          <mat-icon class="eye"> visibility </mat-icon>
+          <div class="main__main-container__container-right__container-infoGame__container-vistas__numVistas">
+            visitas {{ game.numVistas }}
+          </div>
+        </div>
+        <div class="main__main-container__container-right__container-infoGame__container-category">
+          <h3 class="main__main-container__container-right__container-infoGame__container-category__text-category">
+            Genero: {{ game.categoria }}
+          </h3>
+        </div>
+        <div class="main__main-container__container-right__container-infoGame__container-ranking">
+          Valoracion:
+          <div class="main__main-container__container-right__container-infoGame__container-ranking__number-ranking">
+            {{ game.calificacion }}
+          </div>
+          <div class="main__main-container__container-right__container-infoGame__container-ranking__numbCalificaciones">
+            / {{ game.numCalificaciones }} calificaciones
+          </div>
+        </div>
+        <div class="main__main-container__container-right__container-infoGame__container-plataformas">
+          <div class="main__main-container__container-right__container-infoGame__container-category__title">Plataformas:</div>
+          <div class="main__main-container__container-right__container-infoGame__container-plataformas__plataforma"
+            *ngFor="let plataforma of game.plataformas">
+            {{ plataforma }},
+          </div>
+        </div>
+      </div>
+
+      <div id="video" class="main__main-container__container-right__video"></div>
+      <div class="main__main-container__container-right__container-gallery">
+        <div class="main__main-container__container-right__gallery-img" *ngFor="let imagen of game.imagen.slice(1)"
+          (click)="openPopup(imagen)">
           <img [src]="imagen" />
         </div>
       </div>
-
       <div class="popup-img" *ngIf="mostrarPopup" (click)="closePopup()">
         <span>&times;</span>
         <img [src]="imagenPopup" />
       </div>
 
-      <div class="container-description">
-        <textarea
-          class="custom-text-area"
-          placeholder="{{ game.descripcion }}"
-          readonly
-          >{{ game.descripcion }}</textarea
-        >
+      <div class="main__main-container__container-right__container-description">
+        <textarea class="main__main-container__container-right__container-description__custom-text-area"
+          placeholder="{{ game.descripcion }}" readonly>{{ game.descripcion }}</textarea>
       </div>
 
       <section>
-        <h2 class="title-comment">Comentarios</h2>
-        <div class="container-comments">
-          <div class="comentario" *ngFor="let comentario of comentarios">
-            <div class="container-sup-comments">
-              <h2 class="user-name-comment">
+        <div class="main__main-container__container-right__container-title-comments">
+          <h2 class="main__main-container__container-right__container-title-comments__title-comment">
+            Comentarios
+          </h2>
+        </div>
+
+        <div class="main__main-container__container-right__container-comments">
+          <div class="main__main-container__container-right__container-comments__comentario"
+            *ngFor="let comentario of comentarios">
+            <div class="main__main-container__container-right__container-comments__comentario__container-sup-comments">
+              <h2
+                class="main__main-container__container-right__container-comments__comentario__container-sup-comments__user-name-comment">
                 {{ comentario.user }}
               </h2>
-              <h2 class="date-comment">
+              <h2
+                class="main__main-container__container-right__container-comments__comentario__container-sup-comments__date-comment">
                 {{ comentario.fecha }}
               </h2>
             </div>
-            <div class="container-description-comment">
-              <p class="description-comment">
+            <div
+              class="main__main-container__container-right__container-comments__comentario__container-description-comment">
+              <p
+                class="main__main-container__container-right__container-comments__comentario__container-description-comment__description-comment">
                 {{ comentario.comentario }}
               </p>
             </div>
-            <div class="container-inf">
-              <div class="container-likes">
-                <h3 class="date-comment">
+            <div class="main__main-container__container-right__container-comments__comentario__container-inf">
+              <div
+                class="main__main-container__container-right__container-comments__comentario__container-inf__container-likes">
+                <h3
+                  class="main__main-container__container-right__container-comments__comentario__container-sup-comments__date-comment">
                   {{ comentario.likes }}
                 </h3>
-                <mat-icon class="like"> thumb_up </mat-icon>
+                <mat-icon
+                  class="main__main-container__container-right__container-comments__comentario__container-inf__container-likes__like">
+                  thumb_up
+                </mat-icon>
               </div>
-              <div class="container-likes">
-                <h3 class="date-comment">
+              <div
+                class="main__main-container__container-right__container-comments__comentario__container-inf__container-likes">
+                <h3
+                  class="main__main-container__container-right__container-comments__comentario__container-sup-comments__date-comment">
                   {{ comentario.dislikes }}
                 </h3>
-                <mat-icon class="like"> thumb_down </mat-icon>
+                <mat-icon
+                  class="main__main-container__container-right__container-comments__comentario__container-inf__container-likes__like">
+                  thumb_down
+                </mat-icon>
               </div>
             </div>
           </div>

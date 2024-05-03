@@ -12,7 +12,7 @@ export class MainPageComponent implements OnInit{
   category!:string;
 
 ngOnInit(): void {
-    console.log('cat',this.category)
+
 }
 
 handleHoverChange(videojuego: videoGames) {
