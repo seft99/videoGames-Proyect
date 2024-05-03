@@ -62,6 +62,7 @@ body {
           display: flex;
           flex-direction: row;
           color: white;
+          align-items: center;
           gap: 5px;
 
           &__number-ranking {
@@ -70,6 +71,11 @@ body {
           }
           &__numbCalificaciones {
             color: gray;
+          }
+          &__star{
+            vertical-align: bottom;
+            color: orange;
+            font-size: 20px;
           }
         }
         &__container-category{
