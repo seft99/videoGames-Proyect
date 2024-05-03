@@ -1,14 +1,14 @@
-<div class="wrap">
+<div class="scroll" [ngClass]="[isConsult?'flex-consult':'grid scroll']">
   <div
     *ngFor="let videojuego of videoJuegos"
     [ngClass]="{ active: videojuego.hovered }"
     (mouseover)="toggleHover(videojuego)"
     (mouseout)="toggleHover(videojuego)"
-    class="wrap__videoGame"
+    class="videoGame"
     (click)="navigateToConsultVideoGame(videojuego)"
   >
     <img [src]="videojuego.imagen[0]" alt="{{ videojuego.nombre }}" />
-    <div class="wrap__overlay">
+    <div class="overlay">
       <p>{{ videojuego.nombre }}</p>
     </div>
   </div>

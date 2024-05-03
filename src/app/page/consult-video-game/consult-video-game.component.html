@@ -1,8 +1,11 @@
 <app-toolbar />
 <div class="main">
   <div class="main__main-container">
-    <div class="main__main-container__container-img-game">
-      <img [src]="game.imagen[0]" alt="{{ game.nombre }}" class="main__main-container__container-img-game__img" />
+    <div class="main__main-container__container-left">
+      <div class="main__main-container__container-left__container-img-game">
+        <img [src]="game.imagen[0]" alt="{{ game.nombre }}" class="main__main-container__container-left__container-img-game__img" />
+      </div>
+      <app-similar-games [categoriaSeleccionada]="game.categoria"/>
     </div>
     <div class="main__main-container__container-right">
       <div class="main__main-container__container-right__container-up">
@@ -36,7 +39,9 @@
           </div>
         </div>
         <div class="main__main-container__container-right__container-infoGame__container-plataformas">
-          <div class="main__main-container__container-right__container-infoGame__container-category__title">Plataformas:</div>
+          <div class="main__main-container__container-right__container-infoGame__container-category__title">
+            Plataformas:
+          </div>
           <div class="main__main-container__container-right__container-infoGame__container-plataformas__plataforma"
             *ngFor="let plataforma of game.plataformas">
             {{ plataforma }},
@@ -68,7 +73,7 @@
           </h2>
         </div>
 
-        <div class="main__main-container__container-right__container-comments">
+        <div class="main__main-container__container-right__container-comments scroll">
           <div class="main__main-container__container-right__container-comments__comentario"
             *ngFor="let comentario of comentarios">
             <div class="main__main-container__container-right__container-comments__comentario__container-sup-comments">

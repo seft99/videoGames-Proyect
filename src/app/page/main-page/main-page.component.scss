@@ -57,18 +57,6 @@ body {
 }
 
 
-.main__container-right__container-list-video-game::-webkit-scrollbar {
-  width: 7px;
-  border-radius: 8px;
-  background: var(--B500, #33474c);
-}
-
-.main__container-right__container-list-video-game::-webkit-scrollbar-thumb {
-  width: 8px;
-  border-radius: 8px;
-  background-color: #030301;
-  margin: 0 4px;
-}
 
 @media (max-width:819px){
   .main__body{

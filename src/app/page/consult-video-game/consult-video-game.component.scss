@@ -17,14 +17,26 @@ body {
     display: flex;
     border-top: 2px solid orange;
     padding-top: 2rem;
-    &__container-img-game {
-      margin-left: 20px;
-      width: 35%;
-      height: 100%;
-      &__img {
-        width: 100%;
+
+    &__container-left {
+      display: flex;
+      width: 40%;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      &__container-img-game {
+        width: 95%;
+        height: 70%;
+        overflow: hidden;
+        &__img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+        }
       }
     }
+
     &__container-right {
       display: flex;
       margin-left: 50px;
@@ -44,7 +56,7 @@ body {
         font-family: "Kdam Thmor Pro", sans-serif;
       }
 
-      &__container-infoGame{
+      &__container-infoGame {
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -72,16 +84,16 @@ body {
           &__numbCalificaciones {
             color: gray;
           }
-          &__star{
+          &__star {
             vertical-align: bottom;
             color: orange;
             font-size: 20px;
           }
         }
-        &__container-category{
+        &__container-category {
           display: flex;
           width: max-content;
-          &__title{
+          &__title {
             font-size: 14px;
             color: white;
           }
@@ -90,14 +102,13 @@ body {
             color: white;
             margin: 0;
           }
-
         }
 
-        &__container-plataformas{
+        &__container-plataformas {
           display: flex;
           flex-direction: row;
           gap: 5px;
-          &__plataforma{
+          &__plataforma {
             font-size: 12px;
             color: white;
           }
@@ -142,7 +153,7 @@ body {
           border-radius: 8px;
         }
       }
-      &__container-title-comments{
+      &__container-title-comments {
         width: max-content;
         padding: 0px 20px;
         background-color: orange;
@@ -226,31 +237,12 @@ body {
   }
 }
 
-
-
-
-
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.main__main-container__container-right__container-comments::-webkit-scrollbar {
-  scrollbar-width: thin;
-  width: 14px; /* Ancho del scrollbar */
-}
-
-.main__main-container__container-right__container-comments::-webkit-scrollbar-track {
-  background-color: rgb(0, 0, 0);
-  border-radius: 12px;
-}
-
-.main__main-container__container-right__container-comments::-webkit-scrollbar-thumb {
-  border-radius: 12px;
-  border: 5px solid rgb(0, 0, 0); /* Borde del thumb */
-  background-color: rgb(255, 115, 1);
-}
 
 
 .main

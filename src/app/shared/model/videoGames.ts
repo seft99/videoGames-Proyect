@@ -1,5 +1,5 @@
 export interface videoGames {
-  id: number;
+  id: string;
   imagen: string[];
   numVistas: number;
   nombre: string;

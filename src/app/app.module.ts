@@ -15,6 +15,7 @@ import {  ReactiveFormsModule } from '@angular/forms';
 import { CarouselComponent } from './page/carousel/carousel.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriesComponent } from './page/categories/categories.component';
+import { SimilarGamesComponent } from './page/similar-games/similar-games.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CategoriesComponent } from './page/categories/categories.component';
     RegisterUserComponent,
     CarouselComponent,
     CategoriesComponent,
+    SimilarGamesComponent,
 
 
 
