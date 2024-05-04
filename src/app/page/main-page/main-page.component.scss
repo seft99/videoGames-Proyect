@@ -58,7 +58,7 @@ body {
 
 
 
-@media (max-width:819px){
+@media (max-width:835px){
   .main__body{
     flex-direction: column;
     gap: 1rem;
@@ -66,11 +66,24 @@ body {
   .main__body__container-left{
     width: 100%;
   }
+  .main__body__container-right{
+    width: 100%;
+  }
+  .main__body__container-right__videoGames{
+    width: 100%;
+  }
 }
 
 
 
 
+@media (min-width:1300px){
+
+  .main__body__container-right__videoGames{
+    width: 100%;
+  }
+
+}
 
 
 

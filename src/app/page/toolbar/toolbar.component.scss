@@ -35,7 +35,7 @@
   }
 
   &__container-login {
-    width: 20rem;
+    width: 50%;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -86,8 +86,24 @@
   min-height: 20px;
 }
 
-@media(max-width:702px){
+@media(max-width:713px){
   .main-toolbar__container-left__title{
     font-size: 1.5rem;
+  }
+}
+
+@media(max-width:640px){
+  .main-toolbar__container-left__title{
+    font-size: 1.3rem;
+  }
+}
+@media(max-width:616px){
+  .main-toolbar__container-left__title{
+    font-size: 1rem;
+  }
+}
+@media(max-width:579px){
+  .main-toolbar__container-left__title{
+    font-size: 13px;
   }
 }
