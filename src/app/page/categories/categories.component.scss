@@ -26,6 +26,7 @@
       color: white;
       padding: 1rem;
       font-weight: 400;
+      height: 100%;
       cursor: pointer;
     }
   }
@@ -44,12 +45,16 @@
 
 }
 
-@media(max-width:819px){
+@media(max-width:835px){
   .main{
     flex-direction: row;
+    
   }
   .main__mainCategory{
     font-size: 10px;
 
+  }
+  .main__mainCategory__containerCategories{
+    padding: 0 1rem;
   }
 }

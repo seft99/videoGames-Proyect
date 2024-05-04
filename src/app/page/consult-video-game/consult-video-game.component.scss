@@ -24,10 +24,10 @@ body {
       flex-direction: column;
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 2rem;
       &__container-img-game {
         width: 95%;
-        height: 70%;
+        height: 48rem;
         overflow: hidden;
         &__img {
           width: 100%;
@@ -243,8 +243,6 @@ body {
   gap: 10px;
 }
 
-
-
 .main
   .main__main-container__container-right__container-gallery
   .main__main-container__container-right__gallery-img
@@ -291,4 +289,22 @@ body {
 
 .eye {
   color: grey;
+}
+
+@media (max-width: 1100px) {
+  .main__main-container__container-left__container-img-game {
+    display: none;
+  }
+  .main__main-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .main__main-container__container-right {
+    width: 90%;
+    margin-left: 0;
+  }
+  .main__main-container__container-right__container-gallery {
+    justify-content: center;
+  }
 }
