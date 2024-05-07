@@ -11,11 +11,13 @@ import { ToolbarComponent } from './page/toolbar/toolbar.component';
 import { MaterialImportsModule } from './shared/material-imports/material-imports.module';
 import { ConsultVideoGameComponent } from './page/consult-video-game/consult-video-game.component';
 import { RegisterUserComponent } from './page/register-user/register-user.component';
-import {  ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CarouselComponent } from './page/carousel/carousel.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CategoriesComponent } from './page/categories/categories.component';
 import { SimilarGamesComponent } from './page/similar-games/similar-games.component';
+import { SpinnerModule } from './shared/component/spinner/spinner.module';
+import { SpinnerInterceptor } from './shared/interceptor/spinner.interceptor';
 
 @NgModule({
   declarations: [
@@ -29,9 +31,6 @@ import { SimilarGamesComponent } from './page/similar-games/similar-games.compon
     CarouselComponent,
     CategoriesComponent,
     SimilarGamesComponent,
-
-
-
   ],
   imports: [
     BrowserModule,
@@ -39,10 +38,12 @@ import { SimilarGamesComponent } from './page/similar-games/similar-games.compon
     BrowserAnimationsModule,
     MaterialImportsModule,
     ReactiveFormsModule,
-    HttpClientModule
-
+    HttpClientModule,
+    SpinnerModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
