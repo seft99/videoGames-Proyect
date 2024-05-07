@@ -1,25 +1,27 @@
-.main{
+.main {
   width: 510.458px;
   height: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  &__title{
+  &__title {
     text-align: center;
     font-size: 1.25rem;
     color: white;
     font-weight: 700;
   }
-  &__containerGames{
+  &__containerGames {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-
+    width: thin;
+    scrollbar-color: #ff9500 #000000;
   }
 }
-@media(max-width:515px){
-  .main{
+
+@media (max-width: 515px) {
+  .main {
     width: 100%;
   }
 }
