@@ -13,5 +13,19 @@
 </div>
 
 <div class="menu" id="menuDiv">
-  Categorias
+<p>Categorias</p>
+<div class="megaMenu">
+  <div
+    class="megaMenu__item-container"
+    *ngFor="let category of saveArray; let index = index"
+    (click)="emitCategory(category, index)"
+    [ngClass]="{ select: category.select }"
+  >
+    <div class="megaMenu__item-container__item-text">
+      {{ category.categoria }}
+    </div>
+  </div>
 </div>
+</div>
+
+

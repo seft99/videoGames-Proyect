@@ -1,37 +1,43 @@
 <div class="main-toolbar">
-
   <div class="main-toolbar__container-left">
-    <div class="main-toolbar__container-left__icon-back-container" routerLink="/mainPage">
-      <img src="../../../assets/img/logo.png" class="main-toolbar__container-left__icon-back-container__img-icon">
+    <div
+      class="main-toolbar__container-left__icon-back-container"
+      routerLink="/mainPage"
+    >
+      <img
+        src="../../../assets/img/logo.png"
+        class="main-toolbar__container-left__icon-back-container__img-icon"
+      />
     </div>
     <div class="main-toolbar__container-left__title">Phoenix Games</div>
   </div>
 
-    <div class="main-toolbar__container-login">
-        <div class="main-toolbar__container-login__background-user-icon">
-          <img
-            src="../../../assets/img//pngtree-phoenix-flame-flying-png-image_6855516.png"
-            class="main-toolbar__container-login__background-user-icon__img-icon-logo"
-          />
-        </div>
-        <div class="main-toolbar__container-login__container-user">
-          <div class="main-toolbar__container-login__container-user__userName">SEFT99</div>
-          <div class="main-toolbar__container-login__container-user__email-user">sebas.1910@hotmail.com</div>
-        </div>
-
-        <mat-icon class="moreOptions" [matMenuTriggerFor]="afterMenu">
-          keyboard_arrow_down
-        </mat-icon>
-        <mat-menu #afterMenu="matMenu" xPosition="after">
-          <button mat-menu-item>
-            <p class="menu-options-text">Ver Perfil</p>
-          </button>
-          <button mat-menu-item class="menu-options-text" routerLink="/login">
-            <p class="menu-options-text">Cerrar Sesion</p>
-          </button>
-        </mat-menu>
+  <div class="main-toolbar__container-login">
+    <div class="main-toolbar__container-login__background-user-icon">
+      <img
+        src="../../../assets/img//pngtree-phoenix-flame-flying-png-image_6855516.png"
+        class="main-toolbar__container-login__background-user-icon__img-icon-logo"
+      />
+    </div>
+    <div class="main-toolbar__container-login__container-user">
+      <p class="main-toolbar__container-login__container-user__userName">
+        SEFT99
+      </p>
+      <p class="main-toolbar__container-login__container-user__email-user">
+        sebas.1910@hotmail.com
+      </p>
     </div>
 
+    <mat-icon class="moreOptions" [matMenuTriggerFor]="afterMenu">
+      keyboard_arrow_down
+    </mat-icon>
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+      <button mat-menu-item>
+        <p class="menu-options-text">Ver Perfil</p>
+      </button>
+      <button mat-menu-item class="menu-options-text" routerLink="/login">
+        <p class="menu-options-text">Cerrar Sesion</p>
+      </button>
+    </mat-menu>
+  </div>
 </div>
-
-
