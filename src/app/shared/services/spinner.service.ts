@@ -22,6 +22,7 @@ export class SpinnerService {
     }
   }
 
+  // Método para esperar a que las imágenes se carguen
   waitForImages(images: HTMLImageElement[]): void {
     this.show();
     let loadedCount = 0;
@@ -33,12 +34,12 @@ export class SpinnerService {
       }
     };
 
-    images.forEach((image) => {
+    images.forEach(image => {
       if (image.complete) {
         checkIfAllImagesLoaded();
       } else {
         image.onload = checkIfAllImagesLoaded;
-        image.onerror = checkIfAllImagesLoaded;
+        image.onerror = checkIfAllImagesLoaded; // Manejar errores de carga de imágenes
       }
     });
   }

@@ -30,26 +30,21 @@ export class ConsultVideoGameComponent implements OnInit {
   }
 
   getVideoGameById(idGame: number) {
-
     this.serviceVideoGames.getGameById(idGame).subscribe((data) => {
       this.game = data;
       const div: HTMLElement =
         this.elementReft.nativeElement.querySelector('#video');
       div.innerHTML = this.game.video;
       this.updateNumVistas(this.game);
-
       console.log('game',this.game);
     });
   }
 
   updateNumVistas(videoGame: videoGames) {
     videoGame.numVistas = (videoGame.numVistas || 0) + 1; // Aumentamos el número de vistas
-    this.serviceVideoGames.updateNumVistas(videoGame).subscribe(() => {
-
-    }, (error) => {
-
-    });
-  }
+    this.serviceVideoGames.updateNumVistas(videoGame).subscribe({})
+    };
+  
 
 
   comentarios: any = [

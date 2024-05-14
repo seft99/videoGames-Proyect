@@ -36,7 +36,6 @@ export class ViewVideoGameComponent implements OnInit {
     if (idString !== null) {
       this.id = idString;
     }
-    console.log('id', this.id);
   }
 
   ngOnInit(): void {
@@ -82,7 +81,7 @@ export class ViewVideoGameComponent implements OnInit {
     this.changeID = urlSegments[urlSegments.length - 1] !== this.backID;
     if(this.changeID) {
       window.location.reload();
-      window.scrollTo(0, 0); 
+      window.scrollTo(0, 0);
     }
   }
   toggleHover(videojuego: videoGames) {

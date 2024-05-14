@@ -17,12 +17,12 @@ export class SpinnerInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     const images: HTMLImageElement[] = [];
+    this.spinnerSvc.waitForImages(images);
 
     if (req.body !== null && typeof req.body === 'object') {
       this.findImagesInRequestBody(req.body, images);
     }
 
-    this.spinnerSvc.waitForImages(images);
 
     return next.handle(req).pipe(
       delay(200), // Agrega un retraso de 200 milisegundos antes de completar la solicitud

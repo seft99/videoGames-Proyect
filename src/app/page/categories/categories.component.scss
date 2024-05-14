@@ -45,10 +45,11 @@
 
 }
 
+
 @media(max-width:835px){
   .main{
     flex-direction: row;
-    
+
   }
   .main__mainCategory{
     font-size: 10px;
@@ -56,5 +57,39 @@
   }
   .main__mainCategory__containerCategories{
     padding: 0 1rem;
+  }
+}
+
+
+.main {
+  display: block;
+}
+
+
+.menu {
+  display: none;
+  width: max-content;
+  background-color: orange;
+  color: black;
+  border-radius: 30px;
+  padding: 5px 20px;
+  font-weight: 700;
+}
+
+.menu:hover{
+  background-color: black;
+  border: 1px solid black;
+  color: orange;
+}
+
+
+
+@media (max-width: 835px) {
+
+  #mainDiv {
+    display: none;
+  }
+  #menuDiv {
+    display: block;
   }
 }

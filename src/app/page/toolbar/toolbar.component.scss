@@ -1,5 +1,10 @@
+p {
+  padding: 0;
+  margin: 0;
+}
+
 .main-toolbar {
-  width: 97vw;
+  width: 100%;
   height: 4rem;
   background-color: transparent;
   display: flex;
@@ -12,6 +17,7 @@
   left: 0;
   z-index: 100;
   &__container-left {
+    width: 50%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -86,24 +92,48 @@
   min-height: 20px;
 }
 
-@media(max-width:713px){
-  .main-toolbar__container-left__title{
+@media (max-width: 713px) {
+  .main-toolbar__container-left__title {
     font-size: 1.5rem;
   }
 }
 
-@media(max-width:640px){
-  .main-toolbar__container-left__title{
+@media (max-width: 640px) {
+  .main-toolbar__container-left__title {
     font-size: 1.3rem;
   }
 }
-@media(max-width:616px){
-  .main-toolbar__container-left__title{
-    font-size: 1rem;
+@media (max-width: 616px) {
+  .main-toolbar__container-left__icon-back-container {
+    width: 8vw;
+  }
+  .main-toolbar__container-left__title {
+    font-size: 3vw;
+  }
+  .main-toolbar {
+    height: 8vw;
   }
 }
-@media(max-width:579px){
-  .main-toolbar__container-left__title{
-    font-size: 13px;
+@media (max-width: 403px) {
+  .main-toolbar__container-left__title {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 490px) {
+  .main-toolbar__container-login__container-user__email-user {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .main-toolbar__container-login__background-user-icon {
+    width: 5vw;
+  }
+  .main-toolbar__container-login__container-user__userName {
+    font-size: 2vw;
+  }
+  .main-toolbar__container-login__container-user__email-user {
+    font-size: 2vw;
   }
 }
