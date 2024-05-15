@@ -1,56 +1,75 @@
-
-
 .background {
-  background-image: url(../../../assets/img/games-background.jpg);
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+  background-image: url(../../../assets/img/fire-black.jpg);
   background-size: cover;
-}
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-.container-login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 600px;
-  height: 300px;
-  background-color: black;
-  gap: 20px;
-}
+  &__container-login {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 35%;
+    margin-left: 10%;
+    margin-top: 10vh;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad del fondo */
+    position: relative; /* Para que los elementos hijos se coloquen correctamente */
+    z-index: 1; /* Asegura que esté por encima del fondo desenfocado */
+    justify-content: space-between;
+    padding: 20px 0;
 
-.container-title {
-  color: white;
-  font-size: 25px;
-  font-family: "Kdam Thmor Pro", sans-serif;
-  user-select: none;
-}
+    &__background-top-logo {
+      width: 100%;
+      height: 6rem;
+      // background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__logo {
+        height: 7rem;
+      }
+    }
 
-.container-input {
-}
+    &__title {
+      color: white;
+      font-size: 3rem;
+      font-family: "arcade";
+      user-select: none;
+    }
 
-.input {
-  background-color: black;
-  outline: white;
-  height: 40px;
-  width: 350px;
-  color: white;
-  border-radius: 40px;
-  padding: 10px;
-  font-size: 16px;
-}
-input::placeholder {
-  color: #999;
-  font-style: italic;
-  font-size: 14px;
+    &__container-inputs {
+      width: 100%;
+      height: max-content;
+      flex-direction: column;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      &__input {
+        background-color: black;
+        outline: white;
+        height: 2rem;
+        width: 80%;
+        color: white;
+        padding: 0 10px;
+        font-size: 16px;
+      }
+      input::placeholder {
+        color: #999;
+        font-style: italic;
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 .btn-log {
   width: 100px;
   height: 40px;
   background-color: white;
-  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,21 +79,21 @@ input::placeholder {
   user-select: none;
 }
 
-.invalid{
+.invalid {
   background-color: #191919;
-  cursor:default;
+  cursor: default;
 }
-.container-register{
-display: flex;
-align-items: center;
-gap: 5px;
+.container-register {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.text-register{
+.text-register {
   font-size: 14px;
   color: white;
 }
 
-.text-register-link{
+.text-register-link {
   font-size: 14px;
   color: rgb(233, 97, 7);
   cursor: pointer;
@@ -83,16 +102,47 @@ gap: 5px;
 ::ng-deep .cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
   opacity: 0.7;
 }
-::ng-deep  .cdk-overlay-dark-backdrop {
+::ng-deep .cdk-overlay-dark-backdrop {
   backdrop-filter: blur(49px);
 }
 
-.input-error{
-  display: flex;
-  flex-direction: column;
-  height: auto;
+.invalid-text {
+  color: rgb(82, 81, 81);
 }
 
-.invalid-text{
-  color: rgb(82, 81, 81);
+@media (max-width: 800px) {
+  .background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .background__container-login {
+    width: 50%;
+    height: 55vh;
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .background__container-login {
+    width: 70%;
+    height: 50vh;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .background__container-login__title{
+    font-size: 8vw;
+  }
+}
+
+@media (min-width: 1400px) {
+.background__container-login__container-inputs__input{
+  height: 3vw;
+  font-size: 1.2vw;
+}
+input::placeholder {
+  font-size: 1.2vw; /* Tamaño de la fuente deseado */
+}
 }
