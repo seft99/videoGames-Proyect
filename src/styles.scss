@@ -1,18 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Codystar:wght@300&family=Kdam+Thmor+Pro&display=swap");
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 @font-face {
-  font-family: 'arcade';
+  font-family: "arcade";
   src: url(./assets/fonts/arcade/BarcadeBold-B8nV.otf);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
+:root {
+  --fire: linear-gradient(
+    90deg,
+    rgba(253, 29, 29, 1) 42%,
+    rgba(252, 176, 69, 1) 65%,
+    rgba(237, 255, 0, 1) 99%
+  );
+}
 .overlay {
   position: fixed;
   width: 100%;
@@ -26,8 +40,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 /* Establecer el breakpoint 'sm' en 835px */
-
-
 
 .scroll::-webkit-scrollbar {
   width: 14px;
@@ -43,4 +55,3 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border: 5px solid rgb(0, 0, 0);
   background-color: rgb(255, 115, 1);
 }
-
